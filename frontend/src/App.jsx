@@ -319,6 +319,46 @@ const css = `
     font-size: 0.85rem;
   }
 
+  /* ── Contact Form Inputs ── */
+  .am-input {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    resize: vertical;
+  }
+  .am-input::placeholder { color: var(--muted); }
+  .am-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56,189,248,0.12);
+  }
+
+  /* ── Alert boxes ── */
+  .alert-success {
+    background: rgba(56,189,248,0.1);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
+    font-size: 0.92rem;
+  }
+  .alert-error {
+    background: rgba(248,113,113,0.08);
+    border: 1px solid rgba(248,113,113,0.4);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #f87171;
+    font-size: 0.92rem;
+  }
+
   /* ── Mobile tweaks ── */
   @media (max-width: 767px) {
     section { padding: 3.5rem 0; }
@@ -503,25 +543,155 @@ function Experience() {
 }
 
 function Contact() {
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState(null);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+    try {
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        }
+      );
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("success");
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+        setErrorMsg(data.error || "Something went wrong.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMsg("Could not connect to server. Please try again later.");
+    }
+  };
+
   return (
     <section id="contact">
-      <div className="container text-center">
-        <h2 className="section-title">Get In <span>Touch</span></h2>
-        <div className="section-divider" />
-        <p style={{ color: "var(--muted)", marginBottom: "1.75rem", fontSize: "1.05rem" }}>
-          Let's connect for training, collaboration, or development opportunities.
-        </p>
-        <div className="contact-info">
-          <strong>Email: </strong>
-          <a href="mailto:aswinmohandas2305@gmail.com" className="contact-link">aswinmohandas2305@gmail.com</a>
+      <div className="container">
+
+        {/* ── Section Header ── */}
+        <div className="text-center">
+          <h2 className="section-title">Get In <span>Touch</span></h2>
+          <div className="section-divider" />
+          <p style={{ color: "var(--muted)", marginBottom: "2.5rem", fontSize: "1.05rem" }}>
+            Let's connect for training, collaboration, or development opportunities.
+          </p>
         </div>
-        <div className="contact-info" style={{ marginBottom: "1.75rem" }}>
-          <strong>Phone: </strong> 93635 10462
-        </div>
-        <div className="d-flex flex-wrap gap-2 justify-content-center">
-          <a href="https://www.linkedin.com/in/aswinm2305/" target="_blank" rel="noreferrer" className="btn-am-primary">LinkedIn</a>
-          <a href="https://github.com/aswin2305" target="_blank" rel="noreferrer" className="btn-am-outline">GitHub</a>
-          <a href="https://www.behance.net/gallery/227556641/Design-Portfolio-Branding-UIUX-Graphics-Aswin-M" target="_blank" rel="noreferrer" className="btn-am-outline">Behance</a>
+
+        <div className="row g-4 align-items-start">
+
+          {/* ── Left: Contact Info ── */}
+          <div className="col-md-4">
+            <div className="exp-card" style={{ marginBottom: 0 }}>
+              <h5 style={{ color: "var(--accent)", fontFamily: "Syne,sans-serif", marginBottom: "1.25rem" }}>
+                Contact Info
+              </h5>
+
+              <div style={{ marginBottom: "1.1rem" }}>
+                <div className="skill-label">📧 Email</div>
+                <a href="mailto:aswinmohandas2305@gmail.com" className="contact-link" style={{ fontSize: "0.88rem", wordBreak: "break-all" }}>
+                  aswinmohandas2305@gmail.com
+                </a>
+              </div>
+
+              <div style={{ marginBottom: "1.1rem" }}>
+                <div className="skill-label">📞 Phone</div>
+                <span style={{ color: "var(--text)", fontSize: "0.9rem" }}>93635 10462</span>
+              </div>
+
+              <div style={{ marginBottom: "1.5rem" }}>
+                <div className="skill-label">📍 Location</div>
+                <span style={{ color: "var(--text)", fontSize: "0.9rem" }}>Chennai, Tamil Nadu, India</span>
+              </div>
+
+              <div className="d-flex flex-wrap gap-2">
+                <a href="https://www.linkedin.com/in/aswinm2305/" target="_blank" rel="noreferrer"
+                  className="btn-am-primary" style={{ fontSize: "0.8rem", padding: "0.45rem 1rem" }}>LinkedIn</a>
+                <a href="https://github.com/aswin2305" target="_blank" rel="noreferrer"
+                  className="btn-am-outline" style={{ fontSize: "0.8rem", padding: "0.45rem 1rem" }}>GitHub</a>
+                <a href="https://www.behance.net/gallery/227556641/Design-Portfolio-Branding-UIUX-Graphics-Aswin-M" target="_blank" rel="noreferrer"
+                  className="btn-am-outline" style={{ fontSize: "0.8rem", padding: "0.45rem 1rem" }}>Behance</a>
+              </div>
+            </div>
+          </div>
+
+          {/* ── Right: Contact Form ── */}
+          <div className="col-md-8">
+            <div className="exp-card" style={{ marginBottom: 0 }}>
+              <h5 style={{ color: "var(--accent)", fontFamily: "Syne,sans-serif", marginBottom: "1.5rem" }}>
+                Send a Message
+              </h5>
+
+              {status === "success" && (
+                <div className="alert-success">✅ Message sent! I'll get back to you soon.</div>
+              )}
+              {status === "error" && (
+                <div className="alert-error">❌ {errorMsg}</div>
+              )}
+
+              <div className="row g-3">
+                <div className="col-sm-6">
+                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Your Name</label>
+                  <input
+                    type="text" name="name" value={form.name}
+                    onChange={handleChange} placeholder="Aswin M"
+                    className="am-input" required
+                  />
+                </div>
+                <div className="col-sm-6">
+                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Email Address</label>
+                  <input
+                    type="email" name="email" value={form.email}
+                    onChange={handleChange} placeholder="you@email.com"
+                    className="am-input" required
+                  />
+                </div>
+                <div className="col-12">
+                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Subject</label>
+                  <input
+                    type="text" name="subject" value={form.subject}
+                    onChange={handleChange} placeholder="Collaboration / Training / Opportunity"
+                    className="am-input" required
+                  />
+                </div>
+                <div className="col-12">
+                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Message</label>
+                  <textarea
+                    name="message" value={form.message}
+                    onChange={handleChange} placeholder="Hi Aswin, I'd like to..."
+                    className="am-input" rows={5} required
+                  />
+                </div>
+                <div className="col-12">
+                  <button
+                    onClick={handleSubmit}
+                    disabled={status === "loading"}
+                    className="btn-am-primary"
+                    style={{
+                      width: "100%", textAlign: "center", padding: "0.7rem",
+                      cursor: status === "loading" ? "not-allowed" : "pointer",
+                      opacity: status === "loading" ? 0.7 : 1,
+                      border: "none"
+                    }}
+                  >
+                    {status === "loading" ? "Sending..." : "Send Message →"}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
