@@ -118,12 +118,13 @@ const css = `
   }
 
   /* ── Hero ── */
-  #home {
+ #home {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 2rem;
     background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(56,189,248,0.08) 0%, transparent 70%),
                 radial-gradient(ellipse 50% 40% at 10% 80%, rgba(129,140,248,0.07) 0%, transparent 60%),
                 var(--navy);
@@ -135,7 +136,11 @@ const css = `
     border: 3px solid var(--accent);
     object-fit: cover;
     box-shadow: 0 0 40px rgba(56,189,248,0.25);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 767px) {
+    .hero-img { width: 100px; height: 100px; }
+    .hero-badge { margin-bottom: 0.8rem; font-size: 0.72rem; }
   }
   .hero-title {
     font-size: clamp(1.5rem, 7vw, 3.5rem);
@@ -162,7 +167,7 @@ const css = `
     font-size: 0.8rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
   }
 
   /* ── Section common ── */
