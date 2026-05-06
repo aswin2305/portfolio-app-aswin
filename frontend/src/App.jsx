@@ -430,7 +430,7 @@ function Hero() {
         <div className="hero-badge">Available for opportunities</div>
         <img src="https://media.licdn.com/dms/image/v2/D5603AQFNnyXGzNMbEQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1698817705104?e=1779926400&v=beta&t=YX6PvnAT_pybe2INUOksqARB7q01e6WdWTfQZ_H_GcI" alt="Aswin M" className="hero-img" />
         <h1 className="hero-title">Hi, I'm <span>Aswin M</span></h1>
-        <p className="hero-subtitle">Technical Trainer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; UI/UX Designer</p>
+        <p className="hero-subtitle">Trainer &nbsp;·&nbsp; Full Stack Dev &nbsp;·&nbsp; UI/UX Designer</p>
         <div className="d-flex flex-wrap gap-2 justify-content-center">
           <a href="https://www.linkedin.com/in/aswinm2305/" target="_blank" rel="noreferrer" className="btn-am-primary">LinkedIn</a>
           <a href="https://github.com/aswin2305" target="_blank" rel="noreferrer" className="btn-am-outline">GitHub</a>
