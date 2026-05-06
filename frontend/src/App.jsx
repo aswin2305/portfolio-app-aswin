@@ -138,16 +138,18 @@ const css = `
     margin-bottom: 1.5rem;
   }
   .hero-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.6rem, 6vw, 3.5rem);
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 0.75rem;
+    word-break: break-word;
   }
   .hero-title span { color: var(--accent); }
   .hero-subtitle {
     color: var(--muted);
-    font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+    font-size: clamp(0.8rem, 3.5vw, 1.15rem);
     margin-bottom: 2rem;
+    padding: 0 1rem;
   }
   .hero-badge {
     display: inline-block;
