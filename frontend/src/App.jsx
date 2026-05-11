@@ -24,10 +24,10 @@ const PROJECTS = [
     stack: "Django, HTML, CSS, JS, SQLite",
   },
   {
-    title: "TrackMyTicket: Railway Reservation & Status Portal",
-    img: "https://imagesvs.oneindia.com/webp/img/2024/01/irctc3-1706348794.jpg",
-    desc: "A web app for booking and tracking railway reservations using Django backend and Bootstrap-based UI.",
-    stack: "HTML, CSS, JS, jQuery, Django, SQLite",
+    title: "Story2Soul — Creative Digital Agency Website",
+    img: "https://qit.software/wp-content/uploads/2023/05/1111-1.jpg.webp",
+    desc: "A full-stack creative digital agency web application developed using React and Django REST API. Features responsive UI/UX, portfolio showcase, services section, contact management system, and scalable backend integration for modern digital branding experiences.",
+    stack: "React, Vite, Bootstrap, Django REST API, SQLite",
   },
 ];
 
