@@ -28,7 +28,7 @@ const PROJECTS = [
     img: "https://qit.software/wp-content/uploads/2023/05/1111-1.jpg.webp",
     desc: "A full-stack creative digital agency web application developed using React and Django REST API. Features responsive UI/UX, portfolio showcase, services section, contact management system, and scalable backend integration for modern digital branding experiences.",
     stack: "React, Vite, Bootstrap, Django REST API, SQLite",
-    link: "https://project-frontend-story2soul.onrender.com/",
+    link: "https://project-frontend-story2soul.onrender.com/"
   },
 ];
 
@@ -502,17 +502,28 @@ function Skills() {
 }
 
 function Projects() {
+  const openProject = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <section id="projects">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title">Featured <span>Projects</span></h2>
+          <h2 className="section-title">
+            Featured <span>Projects</span>
+          </h2>
           <div className="section-divider" />
         </div>
+
         <div className="row g-4">
           {PROJECTS.map((p) => (
             <div key={p.title} className="col-md-6">
-              <div className="proj-card">
+              <div
+                className="proj-card"
+                onClick={() => openProject(p.link)}
+                style={{ cursor: "pointer" }}
+              >
                 <img src={p.img} alt={p.title} />
                 <div className="proj-body">
                   <h5 className="proj-title">{p.title}</h5>
@@ -523,6 +534,7 @@ function Projects() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
