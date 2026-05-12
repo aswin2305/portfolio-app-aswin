@@ -26,9 +26,9 @@ const PROJECTS = [
   {
     title: "Story2Soul — Creative Digital Agency Website",
     img: "https://qit.software/wp-content/uploads/2023/05/1111-1.jpg.webp",
-    desc: "A full-stack creative digital agency web application developed using React and Django REST API. Features responsive UI/UX, portfolio showcase, services section, contact management system, and scalable backend integration for modern digital branding experiences.",
-    stack: "React, Vite, Bootstrap, Django REST API, SQLite",
-    link: "https://project-frontend-story2soul.onrender.com/"
+    desc: "Story2Soul is a creative digital agency website that offers complete digital solutions including Website Development, UI/UX Design, Digital Marketing, and Photography services. The platform is designed to help businesses build their online presence and showcase their brand effectively.",
+    stack: "Django, HTML, CSS, JavaScript, jQuery, Bootstrap, SQLite",
+    link: "https://project-frontend-story2soul.onrender.com/",
   },
 ];
 
