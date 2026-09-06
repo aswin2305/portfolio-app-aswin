@@ -435,7 +435,7 @@ function Hero() {
     <section id="home">
       <div className="container">
         <div className="hero-badge">Available for opportunities</div>
-        <img src="https://lh3.googleusercontent.com/a/ACg8ocJDsEY92obxdS8xm6gYsMlk5mjnoAusDWcGDuZyxVTfprrOi_Lx=s400-c" alt="Aswin M" className="hero-img" />
+        <img src="" alt="Aswin M" className="hero-img" />
         <h1 className="hero-title">Hi, I'm <span>Aswin M</span></h1>
         <p className="hero-subtitle">Trainer &nbsp;·&nbsp; Full Stack Dev &nbsp;·&nbsp; UI/UX Designer</p>
         <div className="d-flex flex-wrap gap-2 justify-content-center">
