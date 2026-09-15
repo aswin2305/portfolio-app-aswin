@@ -91,9 +91,9 @@ const CERTIFICATIONS = [
     issued: "Jul 2026",
     skills: "GitHub, Git",
     logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain", // Add Microsoft Learning logo path here
-    image: "", // Add certificate image path here
+    image: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/1.png?raw=true", // Add certificate image path here
     credential: "",
-    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/Introduction_to_Github-Microsoft%20Learn.pdf",
+    credentialUrl: "",
   },
   {
     title: "Introduction to AI concepts",
@@ -101,9 +101,9 @@ const CERTIFICATIONS = [
     issued: "Jul 2026",
     skills: "Artificial Intelligence (AI), Natural Language Processing (NLP), +1 skill",
     logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain", // Add Microsoft Learning logo path here
-    image: "", // Add certificate image path here
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/2.png", // Add certificate image path here
     credential: "",
-    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/Introduction_to_AI_Concepts-Microsoft%20Learn.pdf",
+    credentialUrl: "",
   },
   {
     title: "Introduction to Prompt Engineering with GitHub Copilot",
@@ -111,9 +111,9 @@ const CERTIFICATIONS = [
     issued: "Aug 2026",
     skills: "GitHub Copilot, Prompt Engineering",
     logo: "https://coursera-university-assets.s3.amazonaws.com/f7/2fc0826752445896110edd18f55ef6/360x360_1.png", // Add Simplilearn logo path here
-    image: "", // Add certificate image path here
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/3.png", // Add certificate image path here
     credential: "",
-    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/prompt-engineering-simplilearn.pdf",
+    credentialUrl: "",
   },
   {
     title: "Certificate of Completion | Cloud Computing with AI",
@@ -121,9 +121,9 @@ const CERTIFICATIONS = [
     issued: "Sep 2026",
     skills: "Cloud Computing, Amazon Web Services (AWS)",
     logo: "https://play-lh.googleusercontent.com/QOWtHtuT-WAC1clJTeyrDhptb79ZCeQoeHNeHL7XHBsdc_Yl7w7j8XoWKbvhj4tkEMLDAhBPdOwWDbl24xrlyg", // Add Unstop logo path here
-    image: "", // Add certificate image path here
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/4.jpg", // Add certificate image path here
     credential: "",
-    credentialUrl: "https://unstop.com/certificate-preview/bd3bbb98-ffb2-4231-aa3a-3cee81e52671",
+    credentialUrl: "",
   },
   {
     title: "Certificate of Accomplishment - Python (Basic)",
@@ -131,9 +131,9 @@ const CERTIFICATIONS = [
     issued: "Jun 2026",
     skills: "Python (Programming Language)",
     logo: "https://www.interviewcoder.co/blog/hackerrank-cheating/27b5fd6337f0ddff596ed73114bd6583e9ceabe4-1200x629.webp", // Add HackerRank logo path here
-    image: "", // Add certificate image path here
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/5.jpg", // Add certificate image path here
     credential: "",
-    credential: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/python_basic%20certificate-hackerrank.pdf",
+    credential: "",
   },
 ];
 
