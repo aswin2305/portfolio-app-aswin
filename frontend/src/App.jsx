@@ -19,7 +19,7 @@ const SKILLS = {
 const PROJECTS = [
   {
     title: "Technical Skills Lab — Multi-Language Coding Assessment Platform",
-    img: "YOUR_IMAGE_URL_HERE",
+    img: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/technical-skills-lab.png?raw=true",
     desc: "An automated Django-based coding assessment platform for college students that supports C, C++, Java, Python, and SQL. Admins can create questions, manage students and candidate groups, schedule timed tests, and view Excel-based reports. Students can write code using the Monaco Editor, submit within a fixed time, and receive instant auto-graded results with leaderboard rankings.",
     stack: "Django, Python, HTML, CSS, JavaScript, Bootstrap, PostgreSQL, Supabase, Monaco Editor, GCC/G++, JDK, SQLite, Docker, Render",
     link: "YOUR_PROJECT_URL_HERE"
