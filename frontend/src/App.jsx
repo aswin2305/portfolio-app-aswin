@@ -18,6 +18,13 @@ const SKILLS = {
 
 const PROJECTS = [
   {
+    title: "Technical Skills Lab — Multi-Language Coding Assessment Platform",
+    img: "YOUR_IMAGE_URL_HERE",
+    desc: "An automated Django-based coding assessment platform for college students that supports C, C++, Java, Python, and SQL. Admins can create questions, manage students and candidate groups, schedule timed tests, and view Excel-based reports. Students can write code using the Monaco Editor, submit within a fixed time, and receive instant auto-graded results with leaderboard rankings.",
+    stack: "Django, Python, HTML, CSS, JavaScript, Bootstrap, PostgreSQL, Supabase, Monaco Editor, GCC/G++, JDK, SQLite, Docker, Render",
+    link: "YOUR_PROJECT_URL_HERE"
+  },
+  {
     title: "Student Progress Tracker Web App",
     img: "https://www.jotform.com/blog/wp-content/uploads/2021/09/How-to-track-student-progress-1-700x424.png",
     desc: "A Django-based platform for tracking academic performance. Includes secure role-based login, student progress modules, and deployment on Render.",
