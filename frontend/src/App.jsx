@@ -41,9 +41,26 @@ const PROJECTS = [
 
 const EXPERIENCES = [
   {
+    role: "Skill Trainer",
+    company: "IFET COLLEGE OF ENGINEERING",
+    period: "May 2026 – Present · Full-time · On-site",
+    points: [
+      "Conduct technical skill development programs for engineering students with a focus on programming and industry readiness.",
+      "Deliver hands-on training sessions in C, C++, Java, and Python programming languages.",
+      "Design training plans, practical exercises, coding activities, and assessments to improve students' problem-solving skills.",
+      "Manage Skillrack-based coding assessments and analyze student performance to track technical growth.",
+      "Monitor students' learning progress and prepare performance reports for department and placement teams.",
+      "Coordinate with external training organizations for technical training programs, student monitoring, attendance tracking, and progress updates.",
+      "Support placement activities including company coordination, student communication, assessment rounds, and interview processes.",
+      "Mentor students on programming skills, coding practices, and career preparation.",
+      "Maintain training documentation including session plans, attendance records, assessment reports, and placement-related activities.",
+      "Collaborate with academic and placement teams to improve student employability and industry readiness.",
+    ],
+  },
+  {
     role: "Full Stack Web Developer – Python",
     company: "IRG INFOTEC",
-    period: "Feb 2025 – Present",
+    period: "Feb 2025 – Apr 2026",
     points: [
       "Developing and maintaining full-stack web applications using the Django framework.",
       "Designing and building RESTful APIs to support frontend and third-party integrations.",
@@ -55,7 +72,7 @@ const EXPERIENCES = [
   {
     role: "Technical Trainer",
     company: "G-TEC Education",
-    period: "Feb 2023 – Present",
+    period: "Feb 2023 – Apr 2026 · Full-time",
     points: [
       "Delivered 200+ hours of practical training in Full Stack, UI/UX, and Software Testing.",
       "Developed and deployed web apps using Django, HTML/CSS/JS, and SQLite.",
@@ -444,7 +461,7 @@ function Hero() {
         <div className="hero-badge">Available for opportunities</div>
         <img src="https://lh3.googleusercontent.com/a/ACg8ocJDsEY92obxdS8xm6gYsMlk5mjnoAusDWcGDuZyxVTfprrOi_Lx=s288-c-no" alt="Aswin M" className="hero-img" />
         <h1 className="hero-title">Hi, I'm <span>Aswin M</span></h1>
-        <p className="hero-subtitle">Trainer &nbsp;·&nbsp; Full Stack Dev &nbsp;·&nbsp; UI/UX Designer</p>
+        <p className="hero-subtitle">Skill Trainer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; UI/UX Designer</p>
         <div className="d-flex flex-wrap gap-2 justify-content-center">
           <a href="https://www.linkedin.com/in/aswinm2305/" target="_blank" rel="noreferrer" className="btn-am-primary">LinkedIn</a>
           <a href="https://github.com/aswin2305" target="_blank" rel="noreferrer" className="btn-am-outline">GitHub</a>
@@ -462,7 +479,7 @@ function About() {
         <h2 className="section-title">About <span>Me</span></h2>
         <div className="section-divider" />
         <p className="about-text">
-          I'm a <strong>Technical Trainer</strong> with 2+ years of experience in web development and training.
+          I'm a <strong>Skill Trainer</strong> at IFET College of Engineering, focused on technical skill development, programming, and placement readiness.
           Skilled in <strong>HTML, CSS, JavaScript, Python (Django), Java,</strong> and <strong>UI/UX Design</strong>.
           I specialize in hands-on, project-based learning, mentoring students through real-world development under{" "}
           <strong>Agile Scrum</strong> methodology using tools like <strong>Git/GitHub, Jira, and AWS</strong>.
