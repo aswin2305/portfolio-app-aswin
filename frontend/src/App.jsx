@@ -113,7 +113,7 @@ const CERTIFICATIONS = [
     logo: "https://coursera-university-assets.s3.amazonaws.com/f7/2fc0826752445896110edd18f55ef6/360x360_1.png", // Add Simplilearn logo path here
     image: "", // Add certificate image path here
     credential: "",
-    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/prompt-engineering-simplilearn.pdf".
+    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/prompt-engineering-simplilearn.pdf",
   },
   {
     title: "Certificate of Completion | Cloud Computing with AI",
