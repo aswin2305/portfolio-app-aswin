@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
-const NAV_LINKS = ["home", "about", "skills", "projects", "experience", "contact"];
+const NAV_LINKS = ["home", "about", "skills", "projects", "experience", "certifications", "contact"];
 
 const SKILLS = {
   "Front-end": "HTML, CSS, JavaScript, jQuery, Bootstrap",
@@ -60,7 +60,7 @@ const EXPERIENCES = [
   {
     role: "Full Stack Web Developer – Python",
     company: "IRG INFOTEC",
-    period: "Feb 2025 – Apr 2026",
+    period: "Feb 2025 – Present",
     points: [
       "Developing and maintaining full-stack web applications using the Django framework.",
       "Designing and building RESTful APIs to support frontend and third-party integrations.",
@@ -82,6 +82,61 @@ const EXPERIENCES = [
     ],
   },
 ];
+
+
+const CERTIFICATIONS = [
+  {
+    title: "Introduction to GitHub",
+    issuer: "Microsoft Learning",
+    issued: "Jul 2026",
+    skills: "GitHub, Git",
+    logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain", // Add Microsoft Learning logo path here
+    image: "", // Add certificate image path here
+    credential: "",
+    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/Introduction_to_Github-Microsoft%20Learn.pdf",
+  },
+  {
+    title: "Introduction to AI concepts",
+    issuer: "Microsoft Learning",
+    issued: "Jul 2026",
+    skills: "Artificial Intelligence (AI), Natural Language Processing (NLP), +1 skill",
+    logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain", // Add Microsoft Learning logo path here
+    image: "", // Add certificate image path here
+    credential: "",
+    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/Introduction_to_AI_Concepts-Microsoft%20Learn.pdf",
+  },
+  {
+    title: "Introduction to Prompt Engineering with GitHub Copilot",
+    issuer: "Simplilearn",
+    issued: "Aug 2026",
+    skills: "GitHub Copilot, Prompt Engineering",
+    logo: "https://coursera-university-assets.s3.amazonaws.com/f7/2fc0826752445896110edd18f55ef6/360x360_1.png", // Add Simplilearn logo path here
+    image: "", // Add certificate image path here
+    credential: "",
+    credentialUrl: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/prompt-engineering-simplilearn.pdf".
+  },
+  {
+    title: "Certificate of Completion | Cloud Computing with AI",
+    issuer: "Unstop",
+    issued: "Sep 2026",
+    skills: "Cloud Computing, Amazon Web Services (AWS)",
+    logo: "https://play-lh.googleusercontent.com/QOWtHtuT-WAC1clJTeyrDhptb79ZCeQoeHNeHL7XHBsdc_Yl7w7j8XoWKbvhj4tkEMLDAhBPdOwWDbl24xrlyg", // Add Unstop logo path here
+    image: "", // Add certificate image path here
+    credential: "",
+    credentialUrl: "https://unstop.com/certificate-preview/bd3bbb98-ffb2-4231-aa3a-3cee81e52671",
+  },
+  {
+    title: "Certificate of Accomplishment - Python (Basic)",
+    issuer: "HackerRank",
+    issued: "Jun 2026",
+    skills: "Python (Programming Language)",
+    logo: "https://www.interviewcoder.co/blog/hackerrank-cheating/27b5fd6337f0ddff596ed73114bd6583e9ceabe4-1200x629.webp", // Add HackerRank logo path here
+    image: "", // Add certificate image path here
+    credential: "",
+    credential: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/python_basic%20certificate-hackerrank.pdf",
+  },
+];
+
 
 // ── Styles (CSS-in-JS object) ────────────────────────────────────────────────
 
@@ -290,6 +345,122 @@ const css = `
   .exp-period { color: var(--muted); font-size: 0.82rem; margin-bottom: 1rem; }
   .exp-card ul { padding-left: 1.25rem; }
   .exp-card li { color: var(--muted); font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.3rem; }
+
+
+  /* ── Certifications ── */
+  #certifications { background: var(--navy2); }
+
+  .cert-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.4rem;
+    height: 100%;
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .cert-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(56,189,248,0.10);
+  }
+
+  .cert-top {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .cert-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    object-fit: contain;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    padding: 5px;
+    flex-shrink: 0;
+  }
+
+  .cert-logo-placeholder {
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    background: rgba(56,189,248,0.06);
+    border: 1px dashed var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 0.65rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .cert-issuer {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.88rem;
+  }
+
+  .cert-title {
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+  }
+
+  .cert-issued {
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  .cert-image-wrap {
+    width: 100%;
+    height: 170px;
+    border: 1px dashed var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.025);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cert-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cert-image-placeholder {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .cert-skills {
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .cert-credential {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-bottom: 0.8rem;
+    word-break: break-word;
+  }
+
+  .cert-credential strong {
+    color: var(--text);
+  }
 
   /* ── Contact ── */
   #contact { background: var(--navy2); }
@@ -587,6 +758,77 @@ function Experience() {
   );
 }
 
+
+function Certifications() {
+  return (
+    <section id="certifications">
+      <div className="container">
+        <div className="text-center">
+          <h2 className="section-title">Licenses & <span>Certifications</span></h2>
+          <div className="section-divider" />
+        </div>
+
+        <div className="row g-4">
+          {CERTIFICATIONS.map((cert) => (
+            <div key={`${cert.title}-${cert.issuer}`} className="col-md-6 col-lg-4">
+              <div className="cert-card">
+
+                <div className="cert-top">
+                  {cert.logo ? (
+                    <img src={cert.logo} alt={`${cert.issuer} logo`} className="cert-logo" />
+                  ) : (
+                    <div className="cert-logo-placeholder">LOGO<br />PATH</div>
+                  )}
+
+                  <div>
+                    <div className="cert-title">{cert.title}</div>
+                    <div className="cert-issuer">{cert.issuer}</div>
+                    <div className="cert-issued">Issued {cert.issued}</div>
+                  </div>
+                </div>
+
+                <div className="cert-image-wrap">
+                  {cert.image ? (
+                    <img src={cert.image} alt={`${cert.title} certificate`} className="cert-image" />
+                  ) : (
+                    <div className="cert-image-placeholder">
+                      Certificate image<br />
+                      <strong>Add image path in CERTIFICATIONS</strong>
+                    </div>
+                  )}
+                </div>
+
+                <div className="cert-skills">
+                  <strong style={{ color: "var(--text)" }}>Skills:</strong> {cert.skills}
+                </div>
+
+                {cert.credential && (
+                  <div className="cert-credential">
+                    <strong>Credential ID:</strong> {cert.credential}
+                  </div>
+                )}
+
+                {cert.credentialUrl && (
+                  <a
+                    href={cert.credentialUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-am-outline"
+                    style={{ fontSize: "0.78rem", padding: "0.4rem 0.9rem" }}
+                  >
+                    Show Credential →
+                  </a>
+                )}
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState(null);
@@ -761,6 +1003,7 @@ export default function App() {
       <Skills />
       <Projects />
       <Experience />
+      <Certifications />
       <Contact />
       <footer>
         <p>© 2025 Aswin M · All Rights Reserved</p>
