@@ -133,7 +133,7 @@ const CERTIFICATIONS = [
     logo: "https://www.interviewcoder.co/blog/hackerrank-cheating/27b5fd6337f0ddff596ed73114bd6583e9ceabe4-1200x629.webp", // Add HackerRank logo path here
     image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/5.png", // Add certificate image path here
     credential: "",
-    credential: "",
+    credentialUrl: "",
   },
 ];
 
