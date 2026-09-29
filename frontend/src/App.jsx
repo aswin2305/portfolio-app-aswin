@@ -1,9 +1,18 @@
-```jsx
 import { useState, useEffect } from "react";
 
-// ── Data ────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// DATA
+// ─────────────────────────────────────────────────────────────────────────────
 
-const NAV_LINKS = ["home", "about", "skills", "projects", "experience", "certifications", "contact"];
+const NAV_LINKS = [
+  "home",
+  "about",
+  "skills",
+  "projects",
+  "experience",
+  "certifications",
+  "contact",
+];
 
 const SKILLS = {
   "Front-end": "HTML, CSS, JavaScript, jQuery, Bootstrap",
@@ -14,7 +23,8 @@ const SKILLS = {
   "Version Control": "Git, GitHub",
   Methodologies: "Agile, Scrum, Jira",
   Deployment: "Render, AWS (Solution Architect)",
-  "Design Tools": "Figma, Adobe XD, Photoshop, Illustrator, InDesign, CorelDRAW",
+  "Design Tools":
+    "Figma, Adobe XD, Photoshop, Illustrator, InDesign, CorelDRAW",
 };
 
 const PROJECTS = [
@@ -22,21 +32,23 @@ const PROJECTS = [
     title: "Technical Skills Lab — Multi-Language Coding Assessment Platform",
     img: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/technical-skills-lab.png?raw=true",
     desc: "An automated Django-based coding assessment platform for college students that supports C, C++, Java, Python, and SQL. Admins can create questions, manage students and candidate groups, schedule timed tests, and view Excel-based reports. Students can write code using the Monaco Editor, submit within a fixed time, and receive instant auto-graded results with leaderboard rankings.",
-    stack: "Django, Python, HTML, CSS, JavaScript, Bootstrap, PostgreSQL, Supabase, Monaco Editor, GCC/G++, JDK, SQLite, Docker, Render",
-    link: "YOUR_PROJECT_URL_HERE"
+    stack:
+      "Django, Python, HTML, CSS, JavaScript, Bootstrap, PostgreSQL, Supabase, Monaco Editor, GCC/G++, JDK, SQLite, Docker, Render",
+    link: "",
   },
   {
     title: "Student Progress Tracker Web App",
     img: "https://www.jotform.com/blog/wp-content/uploads/2021/09/How-to-track-student-progress-1-700x424.png",
     desc: "A Django-based platform for tracking academic performance. Includes secure role-based login, student progress modules, and deployment on Render.",
-    stack: "Django, HTML, CSS, JS, SQLite",
+    stack: "Django, HTML, CSS, JavaScript, SQLite",
+    link: "",
   },
   {
     title: "Story2Soul — Creative Digital Agency Website",
     img: "https://qit.software/wp-content/uploads/2023/05/1111-1.jpg.webp",
     desc: "Story2Soul is a creative digital agency website that offers complete digital solutions including Website Development, UI/UX Design, Digital Marketing, and Photography services. The platform is designed to help businesses build their online presence and showcase their brand effectively.",
     stack: "Django, HTML, CSS, JavaScript, jQuery, Bootstrap, SQLite",
-    link: "https://project-story2soul.onrender.com/"
+    link: "https://project-story2soul.onrender.com/",
   },
 ];
 
@@ -49,7 +61,7 @@ const EXPERIENCES = [
       "Conduct technical skill development programs for engineering students with a focus on programming and industry readiness.",
       "Deliver hands-on training sessions in C, C++, Java, and Python programming languages.",
       "Design training plans, practical exercises, coding activities, and assessments to improve students' problem-solving skills.",
-      "Manage Skillrack-based coding assessments and analyze student performance to track technical growth.",
+      "Manage SkillRack-based coding assessments and analyze student performance to track technical growth.",
       "Monitor students' learning progress and prepare performance reports for department and placement teams.",
       "Coordinate with external training organizations for technical training programs, student monitoring, attendance tracking, and progress updates.",
       "Support placement activities including company coordination, student communication, assessment rounds, and interview processes.",
@@ -91,7 +103,8 @@ const CERTIFICATIONS = [
     issued: "Jul 2026",
     skills: "GitHub, Git",
     logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain",
-    image: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/1.png?raw=true",
+    image:
+      "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/1.png?raw=true",
     credential: "",
     credentialUrl: "",
   },
@@ -101,7 +114,8 @@ const CERTIFICATIONS = [
     issued: "Jul 2026",
     skills: "Artificial Intelligence (AI), Natural Language Processing (NLP), +1 skill",
     logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain",
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/2.png",
+    image:
+      "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/2.png",
     credential: "",
     credentialUrl: "",
   },
@@ -111,7 +125,8 @@ const CERTIFICATIONS = [
     issued: "Aug 2026",
     skills: "GitHub Copilot, Prompt Engineering",
     logo: "https://coursera-university-assets.s3.amazonaws.com/f7/2fc0826752445896110edd18f55ef6/360x360_1.png",
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/3.png",
+    image:
+      "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/3.png",
     credential: "",
     credentialUrl: "",
   },
@@ -121,7 +136,8 @@ const CERTIFICATIONS = [
     issued: "Sep 2026",
     skills: "Cloud Computing, Amazon Web Services (AWS)",
     logo: "https://play-lh.googleusercontent.com/QOWtHtuT-WAC1clJTeyrDhptb79ZCeQoeHNeHL7XHBsdc_Yl7w7j8XoWKbvhj4tkEMLDAhBPdOwWDbl24xrlyg",
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/4.jpg",
+    image:
+      "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/4.jpg",
     credential: "",
     credentialUrl: "",
   },
@@ -131,594 +147,591 @@ const CERTIFICATIONS = [
     issued: "Jun 2026",
     skills: "Python (Programming Language)",
     logo: "https://www.interviewcoder.co/blog/hackerrank-cheating/27b5fd6337f0ddff596ed73114bd6583e9ceabe4-1200x629.webp",
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/5.png",
+    image:
+      "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/5.png",
     credential: "",
     credentialUrl: "",
   },
 ];
 
-// ── Styles (CSS-in-JS object) ────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// CSS
+// ─────────────────────────────────────────────────────────────────────────────
 
 const css = `
-  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
 
-  :root {
-    --navy: #0a0f1e;
-    --navy2: #111827;
-    --accent: #38bdf8;
-    --accent2: #818cf8;
-    --text: #e2e8f0;
-    --muted: #94a3b8;
-    --card-bg: #161e2e;
-    --border: rgba(56,189,248,0.15);
-  }
+:root {
+  --navy: #0a0f1e;
+  --navy2: #111827;
+  --accent: #38bdf8;
+  --accent2: #818cf8;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --card-bg: #161e2e;
+  --border: rgba(56, 189, 248, 0.15);
+}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    background: var(--navy);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-  }
+body {
+  background: var(--navy);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
 
-  h1,h2,h3,h4,h5,h6 { font-family: 'Syne', sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syne', sans-serif;
+}
 
-  /* ── Navbar ── */
-  .am-nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
-    background: rgba(10,15,30,0.85);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border);
-    padding: 0.75rem 0;
-  }
+/* Navbar */
 
-  .am-brand {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.3rem;
-    color: var(--accent) !important;
-    letter-spacing: -0.5px;
-    text-decoration: none;
-  }
+.am-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 0;
+}
 
-  .am-nav .nav-link {
-    color: var(--muted) !important;
-    font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    padding: 0.4rem 0.75rem !important;
-    border-radius: 6px;
-    transition: color 0.2s, background 0.2s;
-  }
+.am-brand {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--accent) !important;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
 
-  .am-nav .nav-link:hover {
-    color: var(--accent) !important;
-    background: rgba(56,189,248,0.07);
-  }
+.am-nav .nav-link {
+  color: var(--muted) !important;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.75rem !important;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
 
-  /* ── Hero ── */
-  #home {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-    padding-bottom: 2rem;
-    background:
-      radial-gradient(
-        ellipse 70% 60% at 60% 40%,
-        rgba(56,189,248,0.08) 0%,
-        transparent 70%
-      ),
-      radial-gradient(
-        ellipse 50% 40% at 10% 80%,
-        rgba(129,140,248,0.07) 0%,
-        transparent 60%
-      ),
-      var(--navy);
-    text-align: center;
+.am-nav .nav-link:hover {
+  color: var(--accent) !important;
+  background: rgba(56, 189, 248, 0.07);
+}
+
+/* Hero */
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 2rem;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 60% 40%,
+      rgba(56, 189, 248, 0.08) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 10% 80%,
+      rgba(129, 140, 248, 0.07) 0%,
+      transparent 60%
+    ),
+    var(--navy);
+  text-align: center;
+}
+
+.hero-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  object-fit: cover;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.25);
+  margin-bottom: 1rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+}
+
+.hero-title {
+  font-size: clamp(1.5rem, 7vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  white-space: nowrap;
+}
+
+.hero-title span {
+  color: var(--accent);
+}
+
+.hero-subtitle {
+  color: var(--muted);
+  font-size: clamp(0.65rem, 3vw, 1.15rem);
+  margin-bottom: 2rem;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+}
+
+/* Sections */
+
+section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.section-title span {
+  color: var(--accent);
+}
+
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0 auto 2.5rem;
+}
+
+/* About */
+
+#about {
+  background: var(--navy2);
+}
+
+.about-text {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.about-text strong {
+  color: var(--text);
+}
+
+/* Skills */
+
+#skills {
+  background: var(--navy);
+}
+
+.skill-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.4rem;
+  margin-bottom: 0.9rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skill-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.skill-label {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.skill-value {
+  color: var(--text);
+  font-size: 0.93rem;
+}
+
+/* Projects */
+
+#projects {
+  background: var(--navy2);
+}
+
+.proj-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.proj-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(56, 189, 248, 0.12);
+}
+
+.proj-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.proj-body {
+  padding: 1.4rem;
+}
+
+.proj-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--text);
+}
+
+.proj-desc {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.proj-stack {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+/* Experience */
+
+#experience {
+  background: var(--navy);
+}
+
+.exp-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent2));
+  border-radius: 2px;
+}
+
+.exp-card:hover {
+  border-color: var(--accent);
+}
+
+.exp-role {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+
+.exp-company {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.exp-period {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+.exp-card ul {
+  padding-left: 1.25rem;
+}
+
+.exp-card li {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  margin-bottom: 0.3rem;
+}
+
+/* Certifications */
+
+#certifications {
+  background: var(--navy2);
+}
+
+.cert-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.4rem;
+  height: 100%;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.cert-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1);
+}
+
+.cert-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.cert-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.cert-title {
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.cert-issuer {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.cert-issued {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.cert-image-wrap {
+  width: 100%;
+  height: 170px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.025);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-skills {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.cert-credential {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-bottom: 0.8rem;
+  word-break: break-word;
+}
+
+/* Contact */
+
+#contact {
+  background: var(--navy2);
+}
+
+.contact-link {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+/* Buttons */
+
+.btn-am-primary {
+  background: var(--accent);
+  color: var(--navy);
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 1.4rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.btn-am-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  color: var(--navy);
+}
+
+.btn-am-outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.55rem 1.4rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  display: inline-block;
+}
+
+.btn-am-outline:hover {
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-1px);
+  color: var(--accent);
+}
+
+/* Inputs */
+
+.am-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: vertical;
+}
+
+.am-input::placeholder {
+  color: var(--muted);
+}
+
+.am-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+}
+
+/* Alerts */
+
+.alert-success {
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--accent);
+  font-size: 0.92rem;
+}
+
+.alert-error {
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #f87171;
+  font-size: 0.92rem;
+}
+
+/* Footer */
+
+footer {
+  background: var(--navy);
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  section {
+    padding: 3.5rem 0;
   }
 
   .hero-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 3px solid var(--accent);
-    object-fit: cover;
-    box-shadow: 0 0 40px rgba(56,189,248,0.25);
-    margin-bottom: 1rem;
-  }
-
-  @media (max-width: 767px) {
-    .hero-img {
-      width: 100px;
-      height: 100px;
-    }
-
-    .hero-badge {
-      margin-bottom: 0.8rem;
-      font-size: 0.72rem;
-    }
-  }
-
-  .hero-title {
-    font-size: clamp(1.5rem, 7vw, 3.5rem);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 0.75rem;
-    white-space: nowrap;
-  }
-
-  .hero-title span {
-    color: var(--accent);
-  }
-
-  .hero-subtitle {
-    color: var(--muted);
-    font-size: clamp(0.65rem, 3vw, 1.15rem);
-    margin-bottom: 2rem;
-    white-space: nowrap;
-    padding: 0 0.5rem;
+    width: 100px;
+    height: 100px;
   }
 
   .hero-badge {
-    display: inline-block;
-    background: rgba(56,189,248,0.1);
-    border: 1px solid var(--border);
-    color: var(--accent);
-    border-radius: 999px;
-    padding: 0.3rem 1rem;
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     margin-bottom: 0.8rem;
-  }
-
-  /* ── Section common ── */
-  section {
-    padding: 5rem 0;
-  }
-
-  .section-title {
-    font-size: clamp(1.7rem, 3vw, 2.3rem);
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-title span {
-    color: var(--accent);
-  }
-
-  .section-divider {
-    width: 48px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 2px;
-    margin: 0 auto 2.5rem;
-  }
-
-  /* ── About ── */
-  #about {
-    background: var(--navy2);
-  }
-
-  .about-text {
-    color: var(--muted);
-    font-size: 1.05rem;
-    line-height: 1.9;
-    max-width: 750px;
-    margin: 0 auto;
-  }
-
-  .about-text strong {
-    color: var(--text);
-  }
-
-  /* ── Skills ── */
-  #skills {
-    background: var(--navy);
-  }
-
-  .skill-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.1rem 1.4rem;
-    margin-bottom: 0.9rem;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-
-  .skill-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-2px);
-  }
-
-  .skill-label {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.25rem;
-  }
-
-  .skill-value {
-    color: var(--text);
-    font-size: 0.93rem;
-  }
-
-  /* ── Projects ── */
-  #projects {
-    background: var(--navy2);
-  }
-
-  .proj-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    height: 100%;
-    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
-  }
-
-  .proj-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(56,189,248,0.12);
-  }
-
-  .proj-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .proj-body {
-    padding: 1.4rem;
-  }
-
-  .proj-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.6rem;
-    color: var(--text);
-  }
-
-  .proj-desc {
-    color: var(--muted);
-    font-size: 0.88rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-
-  .proj-stack {
-    display: inline-block;
-    background: rgba(56,189,248,0.1);
-    border: 1px solid var(--border);
-    color: var(--accent);
-    border-radius: 6px;
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.03em;
-  }
-
-  /* ── Experience ── */
-  #experience {
-    background: var(--navy);
+    font-size: 0.72rem;
   }
 
   .exp-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.75rem 2rem;
-    margin-bottom: 1.25rem;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.2s;
+    padding: 1.25rem 1.25rem 1.25rem 1.5rem;
   }
-
-  .exp-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: linear-gradient(to bottom, var(--accent), var(--accent2));
-    border-radius: 2px;
-  }
-
-  .exp-card:hover {
-    border-color: var(--accent);
-  }
-
-  .exp-role {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text);
-    margin-bottom: 0.15rem;
-  }
-
-  .exp-company {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .exp-period {
-    color: var(--muted);
-    font-size: 0.82rem;
-    margin-bottom: 1rem;
-  }
-
-  .exp-card ul {
-    padding-left: 1.25rem;
-  }
-
-  .exp-card li {
-    color: var(--muted);
-    font-size: 0.9rem;
-    line-height: 1.75;
-    margin-bottom: 0.3rem;
-  }
-
-  /* ── Certifications ── */
-  #certifications {
-    background: var(--navy2);
-  }
-
-  .cert-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.4rem;
-    height: 100%;
-    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-  }
-
-  .cert-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(56,189,248,0.10);
-  }
-
-  .cert-top {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .cert-logo {
-    width: 52px;
-    height: 52px;
-    border-radius: 10px;
-    object-fit: contain;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border);
-    padding: 5px;
-    flex-shrink: 0;
-  }
-
-  .cert-logo-placeholder {
-    width: 52px;
-    height: 52px;
-    border-radius: 10px;
-    background: rgba(56,189,248,0.06);
-    border: 1px dashed var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-size: 0.65rem;
-    text-align: center;
-    flex-shrink: 0;
-  }
-
-  .cert-issuer {
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 0.88rem;
-  }
-
-  .cert-title {
-    color: var(--text);
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.4;
-    margin-bottom: 0.3rem;
-  }
-
-  .cert-issued {
-    color: var(--muted);
-    font-size: 0.8rem;
-  }
-
-  .cert-image-wrap {
-    width: 100%;
-    height: 170px;
-    border: 1px dashed var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.025);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .cert-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .cert-image-placeholder {
-    color: var(--muted);
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .cert-skills {
-    color: var(--muted);
-    font-size: 0.82rem;
-    line-height: 1.6;
-    margin-bottom: 0.8rem;
-  }
-
-  .cert-credential {
-    color: var(--muted);
-    font-size: 0.78rem;
-    margin-bottom: 0.8rem;
-    word-break: break-word;
-  }
-
-  .cert-credential strong {
-    color: var(--text);
-  }
-
-  /* ── Contact ── */
-  #contact {
-    background: var(--navy2);
-  }
-
-  .contact-link {
-    color: var(--text);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .contact-link:hover {
-    color: var(--accent);
-  }
-
-  .contact-info {
-    color: var(--muted);
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .contact-info strong {
-    color: var(--text);
-  }
-
-  /* ── Buttons ── */
-  .btn-am-primary {
-    background: var(--accent);
-    color: var(--navy);
-    border: none;
-    border-radius: 8px;
-    padding: 0.55rem 1.4rem;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    transition: opacity 0.2s, transform 0.2s;
-    display: inline-block;
-  }
-
-  .btn-am-primary:hover {
-    opacity: 0.85;
-    transform: translateY(-1px);
-    color: var(--navy);
-  }
-
-  .btn-am-outline {
-    background: transparent;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    border-radius: 8px;
-    padding: 0.55rem 1.4rem;
-    font-family: 'Syne', sans-serif;
-    font-weight: 600;
-    font-size: 0.85rem;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    display: inline-block;
-  }
-
-  .btn-am-outline:hover {
-    background: rgba(56,189,248,0.1);
-    transform: translateY(-1px);
-    color: var(--accent);
-  }
-
-  /* ── Footer ── */
-  footer {
-    background: var(--navy);
-    border-top: 1px solid var(--border);
-    padding: 1.25rem 0;
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
-
-  /* ── Contact Form Inputs ── */
-  .am-input {
-    width: 100%;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 0.65rem 0.9rem;
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    outline: none;
-    resize: vertical;
-  }
-
-  .am-input::placeholder {
-    color: var(--muted);
-  }
-
-  .am-input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(56,189,248,0.12);
-  }
-
-  /* ── Alert boxes ── */
-  .alert-success {
-    background: rgba(56,189,248,0.1);
-    border: 1px solid var(--accent);
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 1.25rem;
-    color: var(--accent);
-    font-size: 0.92rem;
-  }
-
-  .alert-error {
-    background: rgba(248,113,113,0.08);
-    border: 1px solid rgba(248,113,113,0.4);
-    border-radius: 10px;
-    padding: 1rem 1.25rem;
-    margin-bottom: 1.25rem;
-    color: #f87171;
-    font-size: 0.92rem;
-  }
-
-  /* ── Mobile tweaks ── */
-  @media (max-width: 767px) {
-    section {
-      padding: 3.5rem 0;
-    }
-
-    .exp-card {
-      padding: 1.25rem 1.25rem 1.25rem 1.5rem;
-    }
-  }
+}
 `;
 
-// ── Components ───────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// NAVBAR
+// ─────────────────────────────────────────────────────────────────────────────
 
 function Navbar() {
   const [open, setOpen] = useState(false);
@@ -726,9 +739,10 @@ function Navbar() {
   return (
     <nav className="am-nav">
       <div className="container d-flex justify-content-between align-items-center">
-        <a href="#home" className="am-brand">Aswin M</a>
+        <a href="#home" className="am-brand">
+          Aswin M
+        </a>
 
-        {/* Mobile toggle */}
         <button
           className="navbar-toggler d-lg-none"
           style={{
@@ -736,48 +750,70 @@ function Navbar() {
             border: "1px solid var(--border)",
             borderRadius: 8,
             padding: "6px 10px",
-            color: "var(--accent)"
+            color: "var(--accent)",
           }}
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation"
         >
-          <span style={{ display: "block", width: 20, height: 2, background: "currentColor", margin: "4px 0" }} />
-          <span style={{ display: "block", width: 20, height: 2, background: "currentColor", margin: "4px 0" }} />
-          <span style={{ display: "block", width: 20, height: 2, background: "currentColor", margin: "4px 0" }} />
+          <span
+            style={{
+              display: "block",
+              width: 20,
+              height: 2,
+              background: "currentColor",
+              margin: "4px 0",
+            }}
+          />
+          <span
+            style={{
+              display: "block",
+              width: 20,
+              height: 2,
+              background: "currentColor",
+              margin: "4px 0",
+            }}
+          />
+          <span
+            style={{
+              display: "block",
+              width: 20,
+              height: 2,
+              background: "currentColor",
+              margin: "4px 0",
+            }}
+          />
         </button>
 
-        {/* Desktop nav */}
         <ul className="navbar-nav flex-row gap-1 d-none d-lg-flex">
-          {NAV_LINKS.map(l => (
-            <li key={l} className="nav-item">
+          {NAV_LINKS.map((link) => (
+            <li key={link} className="nav-item">
               <a
-                href={`#${l}`}
+                href={`#${link}`}
                 className="nav-link"
                 style={{ textTransform: "capitalize" }}
               >
-                {l}
+                {link}
               </a>
             </li>
           ))}
         </ul>
       </div>
 
-      {/* Mobile dropdown */}
       {open && (
         <div className="container d-lg-none">
           <ul className="navbar-nav py-2">
-            {NAV_LINKS.map(l => (
-              <li key={l} className="nav-item">
+            {NAV_LINKS.map((link) => (
+              <li key={link} className="nav-item">
                 <a
-                  href={`#${l}`}
+                  href={`#${link}`}
                   className="nav-link"
                   style={{
                     textTransform: "capitalize",
-                    padding: "0.6rem 0.5rem"
+                    padding: "0.6rem 0.5rem",
                   }}
                   onClick={() => setOpen(false)}
                 >
-                  {l}
+                  {link}
                 </a>
               </li>
             ))}
@@ -787,6 +823,10 @@ function Navbar() {
     </nav>
   );
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HERO
+// ─────────────────────────────────────────────────────────────────────────────
 
 function Hero() {
   return (
@@ -805,7 +845,8 @@ function Hero() {
         </h1>
 
         <p className="hero-subtitle">
-          Skill Trainer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; UI/UX Designer
+          Skill Trainer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; UI/UX
+          Designer
         </p>
 
         <div className="d-flex flex-wrap gap-2 justify-content-center">
@@ -841,6 +882,10 @@ function Hero() {
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// ABOUT
+// ─────────────────────────────────────────────────────────────────────────────
+
 function About() {
   return (
     <section id="about">
@@ -853,24 +898,29 @@ function About() {
 
         <p className="about-text">
           I'm a <strong>Skill Trainer</strong> at IFET College of Engineering,
-          focused on technical skill development, programming, and placement readiness.
-          Skilled in <strong>HTML, CSS, JavaScript, Python (Django), Java,</strong> and
-          <strong> UI/UX Design</strong>.
-          I specialize in hands-on, project-based learning, mentoring students through
-          real-world development under <strong>Agile Scrum</strong> methodology using
-          tools like <strong>Git/GitHub, Jira, and AWS</strong>.
-          Passionate about simplifying tech concepts and helping learners become
-          industry-ready professionals.
+          focused on technical skill development, programming, and placement
+          readiness. Skilled in <strong>HTML, CSS, JavaScript, Python
+          (Django), Java,</strong> and <strong>UI/UX Design</strong>. I
+          specialize in hands-on, project-based learning, mentoring students
+          through real-world development under <strong>Agile Scrum</strong>{" "}
+          methodology using tools like <strong>Git/GitHub, Jira, and
+          AWS</strong>. Passionate about simplifying tech concepts and helping
+          learners become industry-ready professionals.
         </p>
       </div>
     </section>
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// SKILLS
+// ─────────────────────────────────────────────────────────────────────────────
+
 function Skills() {
-  const half = Math.ceil(Object.entries(SKILLS).length / 2);
-  const left = Object.entries(SKILLS).slice(0, half);
-  const right = Object.entries(SKILLS).slice(half);
+  const entries = Object.entries(SKILLS);
+  const half = Math.ceil(entries.length / 2);
+  const left = entries.slice(0, half);
+  const right = entries.slice(half);
 
   return (
     <section id="skills">
@@ -885,19 +935,19 @@ function Skills() {
 
         <div className="row">
           <div className="col-md-6">
-            {left.map(([k, v]) => (
-              <div key={k} className="skill-card">
-                <div className="skill-label">{k}</div>
-                <div className="skill-value">{v}</div>
+            {left.map(([key, value]) => (
+              <div key={key} className="skill-card">
+                <div className="skill-label">{key}</div>
+                <div className="skill-value">{value}</div>
               </div>
             ))}
           </div>
 
           <div className="col-md-6">
-            {right.map(([k, v]) => (
-              <div key={k} className="skill-card">
-                <div className="skill-label">{k}</div>
-                <div className="skill-value">{v}</div>
+            {right.map(([key, value]) => (
+              <div key={key} className="skill-card">
+                <div className="skill-label">{key}</div>
+                <div className="skill-value">{value}</div>
               </div>
             ))}
           </div>
@@ -907,10 +957,14 @@ function Skills() {
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// PROJECTS
+// ─────────────────────────────────────────────────────────────────────────────
+
 function Projects() {
   const openProject = (link) => {
-    if (link && link !== "YOUR_PROJECT_URL_HERE") {
-      window.open(link, "_blank");
+    if (link) {
+      window.open(link, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -926,26 +980,24 @@ function Projects() {
         </div>
 
         <div className="row g-4">
-          {PROJECTS.map((p) => (
-            <div key={p.title} className="col-md-6">
+          {PROJECTS.map((project) => (
+            <div key={project.title} className="col-md-6 col-lg-4">
               <div
                 className="proj-card"
-                onClick={() => openProject(p.link)}
+                onClick={() => openProject(project.link)}
                 style={{
-                  cursor: p.link && p.link !== "YOUR_PROJECT_URL_HERE"
-                    ? "pointer"
-                    : "default"
+                  cursor: project.link ? "pointer" : "default",
                 }}
               >
-                <img src={p.img} alt={p.title} />
+                <img src={project.img} alt={project.title} />
 
                 <div className="proj-body">
-                  <h5 className="proj-title">{p.title}</h5>
+                  <h5 className="proj-title">{project.title}</h5>
 
-                  <p className="proj-desc">{p.desc}</p>
+                  <p className="proj-desc">{project.desc}</p>
 
                   <span className="proj-stack">
-                    ⚙ {p.stack}
+                    ⚙ {project.stack}
                   </span>
                 </div>
               </div>
@@ -956,6 +1008,10 @@ function Projects() {
     </section>
   );
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// EXPERIENCE
+// ─────────────────────────────────────────────────────────────────────────────
 
 function Experience() {
   return (
@@ -969,17 +1025,17 @@ function Experience() {
           <div className="section-divider" />
         </div>
 
-        {EXPERIENCES.map((e) => (
-          <div key={e.company} className="exp-card">
-            <div className="exp-role">{e.role}</div>
+        {EXPERIENCES.map((experience) => (
+          <div key={experience.company} className="exp-card">
+            <div className="exp-role">{experience.role}</div>
 
-            <div className="exp-company">{e.company}</div>
+            <div className="exp-company">{experience.company}</div>
 
-            <div className="exp-period">{e.period}</div>
+            <div className="exp-period">{experience.period}</div>
 
             <ul>
-              {e.points.map((pt, i) => (
-                <li key={i}>{pt}</li>
+              {experience.points.map((point, index) => (
+                <li key={index}>{point}</li>
               ))}
             </ul>
           </div>
@@ -988,6 +1044,10 @@ function Experience() {
     </section>
   );
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CERTIFICATIONS
+// ─────────────────────────────────────────────────────────────────────────────
 
 function Certifications() {
   return (
@@ -1002,84 +1062,70 @@ function Certifications() {
         </div>
 
         <div className="row g-4">
-          {CERTIFICATIONS.map((cert) => (
+          {CERTIFICATIONS.map((certification) => (
             <div
-              key={`${cert.title}-${cert.issuer}`}
+              key={`${certification.title}-${certification.issuer}`}
               className="col-md-6 col-lg-4"
             >
               <div className="cert-card">
-
                 <div className="cert-top">
-                  {cert.logo ? (
-                    <img
-                      src={cert.logo}
-                      alt={`${cert.issuer} logo`}
-                      className="cert-logo"
-                    />
-                  ) : (
-                    <div className="cert-logo-placeholder">
-                      LOGO
-                      <br />
-                      PATH
-                    </div>
-                  )}
+                  <img
+                    src={certification.logo}
+                    alt={`${certification.issuer} logo`}
+                    className="cert-logo"
+                  />
 
                   <div>
-                    <div className="cert-title">{cert.title}</div>
-                    <div className="cert-issuer">{cert.issuer}</div>
+                    <div className="cert-title">
+                      {certification.title}
+                    </div>
+
+                    <div className="cert-issuer">
+                      {certification.issuer}
+                    </div>
+
                     <div className="cert-issued">
-                      Issued {cert.issued}
+                      Issued {certification.issued}
                     </div>
                   </div>
                 </div>
 
                 <div className="cert-image-wrap">
-                  {cert.image ? (
-                    <img
-                      src={cert.image}
-                      alt={`${cert.title} certificate`}
-                      className="cert-image"
-                    />
-                  ) : (
-                    <div className="cert-image-placeholder">
-                      Certificate image
-                      <br />
-                      <strong>
-                        Add image path in CERTIFICATIONS
-                      </strong>
-                    </div>
-                  )}
+                  <img
+                    src={certification.image}
+                    alt={`${certification.title} certificate`}
+                    className="cert-image"
+                  />
                 </div>
 
                 <div className="cert-skills">
                   <strong style={{ color: "var(--text)" }}>
                     Skills:
                   </strong>{" "}
-                  {cert.skills}
+                  {certification.skills}
                 </div>
 
-                {cert.credential && (
+                {certification.credential && (
                   <div className="cert-credential">
                     <strong>Credential ID:</strong>{" "}
-                    {cert.credential}
+                    {certification.credential}
                   </div>
                 )}
 
-                {cert.credentialUrl && (
+                {certification.credentialUrl && (
                   <a
-                    href={cert.credentialUrl}
+                    href={certification.credentialUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="btn-am-outline"
                     style={{
                       fontSize: "0.78rem",
-                      padding: "0.4rem 0.9rem"
+                      padding: "0.4rem 0.9rem",
                     }}
                   >
                     Show Credential →
                   </a>
                 )}
-
               </div>
             </div>
           ))}
@@ -1089,60 +1135,62 @@ function Certifications() {
   );
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// CONTACT
+// ─────────────────────────────────────────────────────────────────────────────
+
 function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
   const [status, setStatus] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (event) => {
     setForm({
       ...form,
-      [e.target.name]: e.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
     setStatus("loading");
     setErrorMsg("");
 
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(form)
-        }
-      );
+      const apiUrl =
+        import.meta.env.VITE_API_URL || "http://localhost:5000";
 
-      const data = await res.json();
+      const response = await fetch(`${apiUrl}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-      if (res.ok) {
+      const data = await response.json();
+
+      if (response.ok) {
         setStatus("success");
 
         setForm({
           name: "",
           email: "",
           subject: "",
-          message: ""
+          message: "",
         });
       } else {
         setStatus("error");
-        setErrorMsg(
-          data.error || "Something went wrong."
-        );
+        setErrorMsg(data.error || "Something went wrong.");
       }
-    } catch {
+    } catch (error) {
       setStatus("error");
       setErrorMsg(
         "Could not connect to server. Please try again later."
@@ -1153,8 +1201,6 @@ function Contact() {
   return (
     <section id="contact">
       <div className="container">
-
-        {/* ── Section Header ── */}
         <div className="text-center">
           <h2 className="section-title">
             Get In <span>Touch</span>
@@ -1166,16 +1212,15 @@ function Contact() {
             style={{
               color: "var(--muted)",
               marginBottom: "2.5rem",
-              fontSize: "1.05rem"
+              fontSize: "1.05rem",
             }}
           >
-            Let's connect for training, collaboration, or development opportunities.
+            Let's connect for training, collaboration, or development
+            opportunities.
           </p>
         </div>
 
         <div className="row g-4 align-items-start">
-
-          {/* ── Left: Contact Info ── */}
           <div className="col-md-4">
             <div
               className="exp-card"
@@ -1184,24 +1229,22 @@ function Contact() {
               <h5
                 style={{
                   color: "var(--accent)",
-                  fontFamily: "Syne,sans-serif",
-                  marginBottom: "1.25rem"
+                  fontFamily: "Syne, sans-serif",
+                  marginBottom: "1.25rem",
                 }}
               >
                 Contact Info
               </h5>
 
               <div style={{ marginBottom: "1.1rem" }}>
-                <div className="skill-label">
-                  📧 Email
-                </div>
+                <div className="skill-label">📧 Email</div>
 
                 <a
                   href="mailto:aswinmohandas2305@gmail.com"
                   className="contact-link"
                   style={{
                     fontSize: "0.88rem",
-                    wordBreak: "break-all"
+                    wordBreak: "break-all",
                   }}
                 >
                   aswinmohandas2305@gmail.com
@@ -1209,14 +1252,12 @@ function Contact() {
               </div>
 
               <div style={{ marginBottom: "1.1rem" }}>
-                <div className="skill-label">
-                  📞 Phone
-                </div>
+                <div className="skill-label">📞 Phone</div>
 
                 <span
                   style={{
                     color: "var(--text)",
-                    fontSize: "0.9rem"
+                    fontSize: "0.9rem",
                   }}
                 >
                   93635 10462
@@ -1224,14 +1265,12 @@ function Contact() {
               </div>
 
               <div style={{ marginBottom: "1.5rem" }}>
-                <div className="skill-label">
-                  📍 Location
-                </div>
+                <div className="skill-label">📍 Location</div>
 
                 <span
                   style={{
                     color: "var(--text)",
-                    fontSize: "0.9rem"
+                    fontSize: "0.9rem",
                   }}
                 >
                   Chennai, Tamil Nadu, India
@@ -1246,7 +1285,7 @@ function Contact() {
                   className="btn-am-primary"
                   style={{
                     fontSize: "0.8rem",
-                    padding: "0.45rem 1rem"
+                    padding: "0.45rem 1rem",
                   }}
                 >
                   LinkedIn
@@ -1259,7 +1298,7 @@ function Contact() {
                   className="btn-am-outline"
                   style={{
                     fontSize: "0.8rem",
-                    padding: "0.45rem 1rem"
+                    padding: "0.45rem 1rem",
                   }}
                 >
                   GitHub
@@ -1272,7 +1311,7 @@ function Contact() {
                   className="btn-am-outline"
                   style={{
                     fontSize: "0.8rem",
-                    padding: "0.45rem 1rem"
+                    padding: "0.45rem 1rem",
                   }}
                 >
                   Behance
@@ -1281,7 +1320,6 @@ function Contact() {
             </div>
           </div>
 
-          {/* ── Right: Contact Form ── */}
           <div className="col-md-8">
             <div
               className="exp-card"
@@ -1290,8 +1328,8 @@ function Contact() {
               <h5
                 style={{
                   color: "var(--accent)",
-                  fontFamily: "Syne,sans-serif",
-                  marginBottom: "1.5rem"
+                  fontFamily: "Syne, sans-serif",
+                  marginBottom: "1.5rem",
                 }}
               >
                 Send a Message
@@ -1309,133 +1347,131 @@ function Contact() {
                 </div>
               )}
 
-              <div className="row g-3">
+              <form onSubmit={handleSubmit}>
+                <div className="row g-3">
+                  <div className="col-sm-6">
+                    <label
+                      className="skill-label"
+                      style={{
+                        display: "block",
+                        marginBottom: 6,
+                      }}
+                    >
+                      Your Name
+                    </label>
 
-                <div className="col-sm-6">
-                  <label
-                    className="skill-label"
-                    style={{
-                      display: "block",
-                      marginBottom: 6
-                    }}
-                  >
-                    Your Name
-                  </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      placeholder="Your name"
+                      className="am-input"
+                      required
+                    />
+                  </div>
 
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="Aswin M"
-                    className="am-input"
-                    required
-                  />
+                  <div className="col-sm-6">
+                    <label
+                      className="skill-label"
+                      style={{
+                        display: "block",
+                        marginBottom: 6,
+                      }}
+                    >
+                      Email Address
+                    </label>
+
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      placeholder="you@email.com"
+                      className="am-input"
+                      required
+                    />
+                  </div>
+
+                  <div className="col-12">
+                    <label
+                      className="skill-label"
+                      style={{
+                        display: "block",
+                        marginBottom: 6,
+                      }}
+                    >
+                      Subject
+                    </label>
+
+                    <input
+                      type="text"
+                      name="subject"
+                      value={form.subject}
+                      onChange={handleChange}
+                      placeholder="Collaboration / Training / Opportunity"
+                      className="am-input"
+                      required
+                    />
+                  </div>
+
+                  <div className="col-12">
+                    <label
+                      className="skill-label"
+                      style={{
+                        display: "block",
+                        marginBottom: 6,
+                      }}
+                    >
+                      Message
+                    </label>
+
+                    <textarea
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      placeholder="Hi Aswin, I'd like to..."
+                      className="am-input"
+                      rows={5}
+                      required
+                    />
+                  </div>
+
+                  <div className="col-12">
+                    <button
+                      type="submit"
+                      disabled={status === "loading"}
+                      className="btn-am-primary"
+                      style={{
+                        width: "100%",
+                        textAlign: "center",
+                        padding: "0.7rem",
+                        cursor:
+                          status === "loading"
+                            ? "not-allowed"
+                            : "pointer",
+                        opacity:
+                          status === "loading" ? 0.7 : 1,
+                      }}
+                    >
+                      {status === "loading"
+                        ? "Sending..."
+                        : "Send Message →"}
+                    </button>
+                  </div>
                 </div>
-
-                <div className="col-sm-6">
-                  <label
-                    className="skill-label"
-                    style={{
-                      display: "block",
-                      marginBottom: 6
-                    }}
-                  >
-                    Email Address
-                  </label>
-
-                  <input
-                    type="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="you@email.com"
-                    className="am-input"
-                    required
-                  />
-                </div>
-
-                <div className="col-12">
-                  <label
-                    className="skill-label"
-                    style={{
-                      display: "block",
-                      marginBottom: 6
-                    }}
-                  >
-                    Subject
-                  </label>
-
-                  <input
-                    type="text"
-                    name="subject"
-                    value={form.subject}
-                    onChange={handleChange}
-                    placeholder="Collaboration / Training / Opportunity"
-                    className="am-input"
-                    required
-                  />
-                </div>
-
-                <div className="col-12">
-                  <label
-                    className="skill-label"
-                    style={{
-                      display: "block",
-                      marginBottom: 6
-                    }}
-                  >
-                    Message
-                  </label>
-
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="Hi Aswin, I'd like to..."
-                    className="am-input"
-                    rows={5}
-                    required
-                  />
-                </div>
-
-                <div className="col-12">
-                  <button
-                    onClick={handleSubmit}
-                    disabled={status === "loading"}
-                    className="btn-am-primary"
-                    style={{
-                      width: "100%",
-                      textAlign: "center",
-                      padding: "0.7rem",
-                      cursor:
-                        status === "loading"
-                          ? "not-allowed"
-                          : "pointer",
-                      opacity:
-                        status === "loading"
-                          ? 0.7
-                          : 1,
-                      border: "none"
-                    }}
-                  >
-                    {status === "loading"
-                      ? "Sending..."
-                      : "Send Message →"}
-                  </button>
-                </div>
-
-              </div>
+              </form>
             </div>
           </div>
-
         </div>
       </div>
     </section>
   );
 }
 
-// ── App ───────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
+// APP
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function App() {
   useEffect(() => {
@@ -1467,4 +1503,3 @@ export default function App() {
     </>
   );
 }
-```
