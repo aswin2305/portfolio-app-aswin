@@ -832,7 +832,7 @@ function Hero() {
   return (
     <section id="home">
       <div className="container">
-        <div className="hero-badge">Hey, I'm Aswin 👋</div>
+        <div className="hero-badge">Code • Create • Teach • Grow</div>
 
         <img
           src="https://lh3.googleusercontent.com/a/ACg8ocJDsEY92obxdS8xm6gYsMlk5mjnoAusDWcGDuZyxVTfprrOi_Lx=s288-c-no"
