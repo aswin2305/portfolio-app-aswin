@@ -1,3 +1,4 @@
+```jsx
 import { useState, useEffect } from "react";
 
 // ── Data ────────────────────────────────────────────────────────────────────
@@ -83,15 +84,14 @@ const EXPERIENCES = [
   },
 ];
 
-
 const CERTIFICATIONS = [
   {
     title: "Introduction to GitHub",
     issuer: "Microsoft Learning",
     issued: "Jul 2026",
     skills: "GitHub, Git",
-    logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain", // Add Microsoft Learning logo path here
-    image: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/1.png?raw=true", // Add certificate image path here
+    logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain",
+    image: "https://github.com/aswin2305/portfolio-app-aswin/blob/main/frontend/img/1.png?raw=true",
     credential: "",
     credentialUrl: "",
   },
@@ -100,8 +100,8 @@ const CERTIFICATIONS = [
     issuer: "Microsoft Learning",
     issued: "Jul 2026",
     skills: "Artificial Intelligence (AI), Natural Language Processing (NLP), +1 skill",
-    logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain", // Add Microsoft Learning logo path here
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/2.png", // Add certificate image path here
+    logo: "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Mlearn-VL?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=1672&qlt=100&fit=constrain",
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/2.png",
     credential: "",
     credentialUrl: "",
   },
@@ -110,8 +110,8 @@ const CERTIFICATIONS = [
     issuer: "Simplilearn",
     issued: "Aug 2026",
     skills: "GitHub Copilot, Prompt Engineering",
-    logo: "https://coursera-university-assets.s3.amazonaws.com/f7/2fc0826752445896110edd18f55ef6/360x360_1.png", // Add Simplilearn logo path here
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/3.png", // Add certificate image path here
+    logo: "https://coursera-university-assets.s3.amazonaws.com/f7/2fc0826752445896110edd18f55ef6/360x360_1.png",
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/3.png",
     credential: "",
     credentialUrl: "",
   },
@@ -120,8 +120,8 @@ const CERTIFICATIONS = [
     issuer: "Unstop",
     issued: "Sep 2026",
     skills: "Cloud Computing, Amazon Web Services (AWS)",
-    logo: "https://play-lh.googleusercontent.com/QOWtHtuT-WAC1clJTeyrDhptb79ZCeQoeHNeHL7XHBsdc_Yl7w7j8XoWKbvhj4tkEMLDAhBPdOwWDbl24xrlyg", // Add Unstop logo path here
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/4.jpg", // Add certificate image path here
+    logo: "https://play-lh.googleusercontent.com/QOWtHtuT-WAC1clJTeyrDhptb79ZCeQoeHNeHL7XHBsdc_Yl7w7j8XoWKbvhj4tkEMLDAhBPdOwWDbl24xrlyg",
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/4.jpg",
     credential: "",
     credentialUrl: "",
   },
@@ -130,13 +130,12 @@ const CERTIFICATIONS = [
     issuer: "HackerRank",
     issued: "Jun 2026",
     skills: "Python (Programming Language)",
-    logo: "https://www.interviewcoder.co/blog/hackerrank-cheating/27b5fd6337f0ddff596ed73114bd6583e9ceabe4-1200x629.webp", // Add HackerRank logo path here
-    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/5.png", // Add certificate image path here
+    logo: "https://www.interviewcoder.co/blog/hackerrank-cheating/27b5fd6337f0ddff596ed73114bd6583e9ceabe4-1200x629.webp",
+    image: "https://raw.githubusercontent.com/aswin2305/portfolio-app-aswin/refs/heads/main/frontend/img/5.png",
     credential: "",
     credentialUrl: "",
   },
 ];
-
 
 // ── Styles (CSS-in-JS object) ────────────────────────────────────────────────
 
@@ -174,6 +173,7 @@ const css = `
     border-bottom: 1px solid var(--border);
     padding: 0.75rem 0;
   }
+
   .am-brand {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -182,6 +182,7 @@ const css = `
     letter-spacing: -0.5px;
     text-decoration: none;
   }
+
   .am-nav .nav-link {
     color: var(--muted) !important;
     font-size: 0.88rem;
@@ -192,36 +193,57 @@ const css = `
     border-radius: 6px;
     transition: color 0.2s, background 0.2s;
   }
+
   .am-nav .nav-link:hover {
     color: var(--accent) !important;
     background: rgba(56,189,248,0.07);
   }
 
   /* ── Hero ── */
- #home {
+  #home {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 60px;
     padding-bottom: 2rem;
-    background: radial-gradient(ellipse 70% 60% at 60% 40%, rgba(56,189,248,0.08) 0%, transparent 70%),
-                radial-gradient(ellipse 50% 40% at 10% 80%, rgba(129,140,248,0.07) 0%, transparent 60%),
-                var(--navy);
+    background:
+      radial-gradient(
+        ellipse 70% 60% at 60% 40%,
+        rgba(56,189,248,0.08) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        ellipse 50% 40% at 10% 80%,
+        rgba(129,140,248,0.07) 0%,
+        transparent 60%
+      ),
+      var(--navy);
     text-align: center;
   }
+
   .hero-img {
-    width: 130px; height: 130px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 3px solid var(--accent);
     object-fit: cover;
     box-shadow: 0 0 40px rgba(56,189,248,0.25);
     margin-bottom: 1rem;
   }
+
   @media (max-width: 767px) {
-    .hero-img { width: 100px; height: 100px; }
-    .hero-badge { margin-bottom: 0.8rem; font-size: 0.72rem; }
+    .hero-img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .hero-badge {
+      margin-bottom: 0.8rem;
+      font-size: 0.72rem;
+    }
   }
+
   .hero-title {
     font-size: clamp(1.5rem, 7vw, 3.5rem);
     font-weight: 800;
@@ -229,7 +251,11 @@ const css = `
     margin-bottom: 0.75rem;
     white-space: nowrap;
   }
-  .hero-title span { color: var(--accent); }
+
+  .hero-title span {
+    color: var(--accent);
+  }
+
   .hero-subtitle {
     color: var(--muted);
     font-size: clamp(0.65rem, 3vw, 1.15rem);
@@ -237,6 +263,7 @@ const css = `
     white-space: nowrap;
     padding: 0 0.5rem;
   }
+
   .hero-badge {
     display: inline-block;
     background: rgba(56,189,248,0.1);
@@ -251,22 +278,33 @@ const css = `
   }
 
   /* ── Section common ── */
-  section { padding: 5rem 0; }
+  section {
+    padding: 5rem 0;
+  }
+
   .section-title {
     font-size: clamp(1.7rem, 3vw, 2.3rem);
     font-weight: 800;
     margin-bottom: 0.5rem;
   }
-  .section-title span { color: var(--accent); }
+
+  .section-title span {
+    color: var(--accent);
+  }
+
   .section-divider {
-    width: 48px; height: 3px;
+    width: 48px;
+    height: 3px;
     background: var(--accent);
     border-radius: 2px;
     margin: 0 auto 2.5rem;
   }
 
   /* ── About ── */
-  #about { background: var(--navy2); }
+  #about {
+    background: var(--navy2);
+  }
+
   .about-text {
     color: var(--muted);
     font-size: 1.05rem;
@@ -274,10 +312,16 @@ const css = `
     max-width: 750px;
     margin: 0 auto;
   }
-  .about-text strong { color: var(--text); }
+
+  .about-text strong {
+    color: var(--text);
+  }
 
   /* ── Skills ── */
-  #skills { background: var(--navy); }
+  #skills {
+    background: var(--navy);
+  }
+
   .skill-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -286,12 +330,31 @@ const css = `
     margin-bottom: 0.9rem;
     transition: border-color 0.2s, transform 0.2s;
   }
-  .skill-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-  .skill-label { color: var(--accent); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
-  .skill-value { color: var(--text); font-size: 0.93rem; }
+
+  .skill-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .skill-label {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .skill-value {
+    color: var(--text);
+    font-size: 0.93rem;
+  }
 
   /* ── Projects ── */
-  #projects { background: var(--navy2); }
+  #projects {
+    background: var(--navy2);
+  }
+
   .proj-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -300,15 +363,37 @@ const css = `
     height: 100%;
     transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
   }
+
   .proj-card:hover {
     border-color: var(--accent);
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(56,189,248,0.12);
   }
-  .proj-card img { width: 100%; height: 200px; object-fit: cover; }
-  .proj-body { padding: 1.4rem; }
-  .proj-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem; color: var(--text); }
-  .proj-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 1rem; }
+
+  .proj-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .proj-body {
+    padding: 1.4rem;
+  }
+
+  .proj-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: var(--text);
+  }
+
+  .proj-desc {
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
   .proj-stack {
     display: inline-block;
     background: rgba(56,189,248,0.1);
@@ -321,7 +406,10 @@ const css = `
   }
 
   /* ── Experience ── */
-  #experience { background: var(--navy); }
+  #experience {
+    background: var(--navy);
+  }
+
   .exp-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
@@ -332,23 +420,56 @@ const css = `
     overflow: hidden;
     transition: border-color 0.2s;
   }
+
   .exp-card::before {
     content: '';
-    position: absolute; left: 0; top: 0; bottom: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: 3px;
     background: linear-gradient(to bottom, var(--accent), var(--accent2));
     border-radius: 2px;
   }
-  .exp-card:hover { border-color: var(--accent); }
-  .exp-role { font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.15rem; }
-  .exp-company { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
-  .exp-period { color: var(--muted); font-size: 0.82rem; margin-bottom: 1rem; }
-  .exp-card ul { padding-left: 1.25rem; }
-  .exp-card li { color: var(--muted); font-size: 0.9rem; line-height: 1.75; margin-bottom: 0.3rem; }
 
+  .exp-card:hover {
+    border-color: var(--accent);
+  }
+
+  .exp-role {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.15rem;
+  }
+
+  .exp-company {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  .exp-period {
+    color: var(--muted);
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+  }
+
+  .exp-card ul {
+    padding-left: 1.25rem;
+  }
+
+  .exp-card li {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    margin-bottom: 0.3rem;
+  }
 
   /* ── Certifications ── */
-  #certifications { background: var(--navy2); }
+  #certifications {
+    background: var(--navy2);
+  }
 
   .cert-card {
     background: var(--card-bg);
@@ -463,19 +584,29 @@ const css = `
   }
 
   /* ── Contact ── */
-  #contact { background: var(--navy2); }
+  #contact {
+    background: var(--navy2);
+  }
+
   .contact-link {
     color: var(--text);
     text-decoration: none;
     transition: color 0.2s;
   }
-  .contact-link:hover { color: var(--accent); }
+
+  .contact-link:hover {
+    color: var(--accent);
+  }
+
   .contact-info {
     color: var(--muted);
     font-size: 1rem;
     margin-bottom: 0.6rem;
   }
-  .contact-info strong { color: var(--text); }
+
+  .contact-info strong {
+    color: var(--text);
+  }
 
   /* ── Buttons ── */
   .btn-am-primary {
@@ -492,7 +623,13 @@ const css = `
     transition: opacity 0.2s, transform 0.2s;
     display: inline-block;
   }
-  .btn-am-primary:hover { opacity: 0.85; transform: translateY(-1px); color: var(--navy); }
+
+  .btn-am-primary:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+    color: var(--navy);
+  }
+
   .btn-am-outline {
     background: transparent;
     color: var(--accent);
@@ -507,6 +644,7 @@ const css = `
     transition: background 0.2s, color 0.2s, transform 0.2s;
     display: inline-block;
   }
+
   .btn-am-outline:hover {
     background: rgba(56,189,248,0.1);
     transform: translateY(-1px);
@@ -537,7 +675,11 @@ const css = `
     outline: none;
     resize: vertical;
   }
-  .am-input::placeholder { color: var(--muted); }
+
+  .am-input::placeholder {
+    color: var(--muted);
+  }
+
   .am-input:focus {
     border-color: var(--accent);
     box-shadow: 0 0 0 3px rgba(56,189,248,0.12);
@@ -553,6 +695,7 @@ const css = `
     color: var(--accent);
     font-size: 0.92rem;
   }
+
   .alert-error {
     background: rgba(248,113,113,0.08);
     border: 1px solid rgba(248,113,113,0.4);
@@ -565,8 +708,13 @@ const css = `
 
   /* ── Mobile tweaks ── */
   @media (max-width: 767px) {
-    section { padding: 3.5rem 0; }
-    .exp-card { padding: 1.25rem 1.25rem 1.25rem 1.5rem; }
+    section {
+      padding: 3.5rem 0;
+    }
+
+    .exp-card {
+      padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+    }
   }
 `;
 
@@ -583,7 +731,13 @@ function Navbar() {
         {/* Mobile toggle */}
         <button
           className="navbar-toggler d-lg-none"
-          style={{ background: "none", border: "1px solid var(--border)", borderRadius: 8, padding: "6px 10px", color: "var(--accent)" }}
+          style={{
+            background: "none",
+            border: "1px solid var(--border)",
+            borderRadius: 8,
+            padding: "6px 10px",
+            color: "var(--accent)"
+          }}
           onClick={() => setOpen(!open)}
           aria-label="Toggle navigation"
         >
@@ -596,7 +750,13 @@ function Navbar() {
         <ul className="navbar-nav flex-row gap-1 d-none d-lg-flex">
           {NAV_LINKS.map(l => (
             <li key={l} className="nav-item">
-              <a href={`#${l}`} className="nav-link" style={{ textTransform: "capitalize" }}>{l}</a>
+              <a
+                href={`#${l}`}
+                className="nav-link"
+                style={{ textTransform: "capitalize" }}
+              >
+                {l}
+              </a>
             </li>
           ))}
         </ul>
@@ -611,7 +771,10 @@ function Navbar() {
                 <a
                   href={`#${l}`}
                   className="nav-link"
-                  style={{ textTransform: "capitalize", padding: "0.6rem 0.5rem" }}
+                  style={{
+                    textTransform: "capitalize",
+                    padding: "0.6rem 0.5rem"
+                  }}
                   onClick={() => setOpen(false)}
                 >
                   {l}
@@ -629,14 +792,49 @@ function Hero() {
   return (
     <section id="home">
       <div className="container">
-        <div className="hero-badge">Available for opportunities</div>
-        <img src="https://lh3.googleusercontent.com/a/ACg8ocJDsEY92obxdS8xm6gYsMlk5mjnoAusDWcGDuZyxVTfprrOi_Lx=s288-c-no" alt="Aswin M" className="hero-img" />
-        <h1 className="hero-title">Hi, I'm <span>Aswin M</span></h1>
-        <p className="hero-subtitle">Skill Trainer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; UI/UX Designer</p>
+        <div className="hero-badge">Hey, I'm Aswin 👋</div>
+
+        <img
+          src="https://lh3.googleusercontent.com/a/ACg8ocJDsEY92obxdS8xm6gYsMlk5mjnoAusDWcGDuZyxVTfprrOi_Lx=s288-c-no"
+          alt="Aswin M"
+          className="hero-img"
+        />
+
+        <h1 className="hero-title">
+          Hi, I'm <span>Aswin M</span>
+        </h1>
+
+        <p className="hero-subtitle">
+          Skill Trainer &nbsp;·&nbsp; Full Stack Developer &nbsp;·&nbsp; UI/UX Designer
+        </p>
+
         <div className="d-flex flex-wrap gap-2 justify-content-center">
-          <a href="https://www.linkedin.com/in/aswinm2305/" target="_blank" rel="noreferrer" className="btn-am-primary">LinkedIn</a>
-          <a href="https://github.com/aswin2305" target="_blank" rel="noreferrer" className="btn-am-outline">GitHub</a>
-          <a href="https://www.behance.net/gallery/227556641/Design-Portfolio-Branding-UIUX-Graphics-Aswin-M" target="_blank" rel="noreferrer" className="btn-am-outline">Behance</a>
+          <a
+            href="https://www.linkedin.com/in/aswinm2305/"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-am-primary"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/aswin2305"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-am-outline"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.behance.net/gallery/227556641/Design-Portfolio-Branding-UIUX-Graphics-Aswin-M"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-am-outline"
+          >
+            Behance
+          </a>
         </div>
       </div>
     </section>
@@ -647,14 +845,22 @@ function About() {
   return (
     <section id="about">
       <div className="container text-center">
-        <h2 className="section-title">About <span>Me</span></h2>
+        <h2 className="section-title">
+          About <span>Me</span>
+        </h2>
+
         <div className="section-divider" />
+
         <p className="about-text">
-          I'm a <strong>Skill Trainer</strong> at IFET College of Engineering, focused on technical skill development, programming, and placement readiness.
-          Skilled in <strong>HTML, CSS, JavaScript, Python (Django), Java,</strong> and <strong>UI/UX Design</strong>.
-          I specialize in hands-on, project-based learning, mentoring students through real-world development under{" "}
-          <strong>Agile Scrum</strong> methodology using tools like <strong>Git/GitHub, Jira, and AWS</strong>.
-          Passionate about simplifying tech concepts and helping learners become industry-ready professionals.
+          I'm a <strong>Skill Trainer</strong> at IFET College of Engineering,
+          focused on technical skill development, programming, and placement readiness.
+          Skilled in <strong>HTML, CSS, JavaScript, Python (Django), Java,</strong> and
+          <strong> UI/UX Design</strong>.
+          I specialize in hands-on, project-based learning, mentoring students through
+          real-world development under <strong>Agile Scrum</strong> methodology using
+          tools like <strong>Git/GitHub, Jira, and AWS</strong>.
+          Passionate about simplifying tech concepts and helping learners become
+          industry-ready professionals.
         </p>
       </div>
     </section>
@@ -670,9 +876,13 @@ function Skills() {
     <section id="skills">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title">My <span>Skills</span></h2>
+          <h2 className="section-title">
+            My <span>Skills</span>
+          </h2>
+
           <div className="section-divider" />
         </div>
+
         <div className="row">
           <div className="col-md-6">
             {left.map(([k, v]) => (
@@ -682,6 +892,7 @@ function Skills() {
               </div>
             ))}
           </div>
+
           <div className="col-md-6">
             {right.map(([k, v]) => (
               <div key={k} className="skill-card">
@@ -698,7 +909,9 @@ function Skills() {
 
 function Projects() {
   const openProject = (link) => {
-    window.open(link, "_blank");
+    if (link && link !== "YOUR_PROJECT_URL_HERE") {
+      window.open(link, "_blank");
+    }
   };
 
   return (
@@ -708,6 +921,7 @@ function Projects() {
           <h2 className="section-title">
             Featured <span>Projects</span>
           </h2>
+
           <div className="section-divider" />
         </div>
 
@@ -717,19 +931,27 @@ function Projects() {
               <div
                 className="proj-card"
                 onClick={() => openProject(p.link)}
-                style={{ cursor: "pointer" }}
+                style={{
+                  cursor: p.link && p.link !== "YOUR_PROJECT_URL_HERE"
+                    ? "pointer"
+                    : "default"
+                }}
               >
                 <img src={p.img} alt={p.title} />
+
                 <div className="proj-body">
                   <h5 className="proj-title">{p.title}</h5>
+
                   <p className="proj-desc">{p.desc}</p>
-                  <span className="proj-stack">⚙ {p.stack}</span>
+
+                  <span className="proj-stack">
+                    ⚙ {p.stack}
+                  </span>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
@@ -740,16 +962,25 @@ function Experience() {
     <section id="experience">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title">Work <span>Experience</span></h2>
+          <h2 className="section-title">
+            Work <span>Experience</span>
+          </h2>
+
           <div className="section-divider" />
         </div>
+
         {EXPERIENCES.map((e) => (
           <div key={e.company} className="exp-card">
             <div className="exp-role">{e.role}</div>
+
             <div className="exp-company">{e.company}</div>
+
             <div className="exp-period">{e.period}</div>
+
             <ul>
-              {e.points.map((pt, i) => <li key={i}>{pt}</li>)}
+              {e.points.map((pt, i) => (
+                <li key={i}>{pt}</li>
+              ))}
             </ul>
           </div>
         ))}
@@ -758,53 +989,79 @@ function Experience() {
   );
 }
 
-
 function Certifications() {
   return (
     <section id="certifications">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-title">Licenses & <span>Certifications</span></h2>
+          <h2 className="section-title">
+            Licenses & <span>Certifications</span>
+          </h2>
+
           <div className="section-divider" />
         </div>
 
         <div className="row g-4">
           {CERTIFICATIONS.map((cert) => (
-            <div key={`${cert.title}-${cert.issuer}`} className="col-md-6 col-lg-4">
+            <div
+              key={`${cert.title}-${cert.issuer}`}
+              className="col-md-6 col-lg-4"
+            >
               <div className="cert-card">
 
                 <div className="cert-top">
                   {cert.logo ? (
-                    <img src={cert.logo} alt={`${cert.issuer} logo`} className="cert-logo" />
+                    <img
+                      src={cert.logo}
+                      alt={`${cert.issuer} logo`}
+                      className="cert-logo"
+                    />
                   ) : (
-                    <div className="cert-logo-placeholder">LOGO<br />PATH</div>
+                    <div className="cert-logo-placeholder">
+                      LOGO
+                      <br />
+                      PATH
+                    </div>
                   )}
 
                   <div>
                     <div className="cert-title">{cert.title}</div>
                     <div className="cert-issuer">{cert.issuer}</div>
-                    <div className="cert-issued">Issued {cert.issued}</div>
+                    <div className="cert-issued">
+                      Issued {cert.issued}
+                    </div>
                   </div>
                 </div>
 
                 <div className="cert-image-wrap">
                   {cert.image ? (
-                    <img src={cert.image} alt={`${cert.title} certificate`} className="cert-image" />
+                    <img
+                      src={cert.image}
+                      alt={`${cert.title} certificate`}
+                      className="cert-image"
+                    />
                   ) : (
                     <div className="cert-image-placeholder">
-                      Certificate image<br />
-                      <strong>Add image path in CERTIFICATIONS</strong>
+                      Certificate image
+                      <br />
+                      <strong>
+                        Add image path in CERTIFICATIONS
+                      </strong>
                     </div>
                   )}
                 </div>
 
                 <div className="cert-skills">
-                  <strong style={{ color: "var(--text)" }}>Skills:</strong> {cert.skills}
+                  <strong style={{ color: "var(--text)" }}>
+                    Skills:
+                  </strong>{" "}
+                  {cert.skills}
                 </div>
 
                 {cert.credential && (
                   <div className="cert-credential">
-                    <strong>Credential ID:</strong> {cert.credential}
+                    <strong>Credential ID:</strong>{" "}
+                    {cert.credential}
                   </div>
                 )}
 
@@ -814,7 +1071,10 @@ function Certifications() {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-am-outline"
-                    style={{ fontSize: "0.78rem", padding: "0.4rem 0.9rem" }}
+                    style={{
+                      fontSize: "0.78rem",
+                      padding: "0.4rem 0.9rem"
+                    }}
                   >
                     Show Credential →
                   </a>
@@ -830,36 +1090,63 @@ function Certifications() {
 }
 
 function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
   const [status, setStatus] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setStatus("loading");
     setErrorMsg("");
+
     try {
       const res = await fetch(
         `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/contact`,
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(form),
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(form)
         }
       );
+
       const data = await res.json();
+
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", subject: "", message: "" });
+
+        setForm({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
       } else {
         setStatus("error");
-        setErrorMsg(data.error || "Something went wrong.");
+        setErrorMsg(
+          data.error || "Something went wrong."
+        );
       }
     } catch {
       setStatus("error");
-      setErrorMsg("Could not connect to server. Please try again later.");
+      setErrorMsg(
+        "Could not connect to server. Please try again later."
+      );
     }
   };
 
@@ -869,9 +1156,19 @@ function Contact() {
 
         {/* ── Section Header ── */}
         <div className="text-center">
-          <h2 className="section-title">Get In <span>Touch</span></h2>
+          <h2 className="section-title">
+            Get In <span>Touch</span>
+          </h2>
+
           <div className="section-divider" />
-          <p style={{ color: "var(--muted)", marginBottom: "2.5rem", fontSize: "1.05rem" }}>
+
+          <p
+            style={{
+              color: "var(--muted)",
+              marginBottom: "2.5rem",
+              fontSize: "1.05rem"
+            }}
+          >
             Let's connect for training, collaboration, or development opportunities.
           </p>
         </div>
@@ -880,101 +1177,254 @@ function Contact() {
 
           {/* ── Left: Contact Info ── */}
           <div className="col-md-4">
-            <div className="exp-card" style={{ marginBottom: 0 }}>
-              <h5 style={{ color: "var(--accent)", fontFamily: "Syne,sans-serif", marginBottom: "1.25rem" }}>
+            <div
+              className="exp-card"
+              style={{ marginBottom: 0 }}
+            >
+              <h5
+                style={{
+                  color: "var(--accent)",
+                  fontFamily: "Syne,sans-serif",
+                  marginBottom: "1.25rem"
+                }}
+              >
                 Contact Info
               </h5>
 
               <div style={{ marginBottom: "1.1rem" }}>
-                <div className="skill-label">📧 Email</div>
-                <a href="mailto:aswinmohandas2305@gmail.com" className="contact-link" style={{ fontSize: "0.88rem", wordBreak: "break-all" }}>
+                <div className="skill-label">
+                  📧 Email
+                </div>
+
+                <a
+                  href="mailto:aswinmohandas2305@gmail.com"
+                  className="contact-link"
+                  style={{
+                    fontSize: "0.88rem",
+                    wordBreak: "break-all"
+                  }}
+                >
                   aswinmohandas2305@gmail.com
                 </a>
               </div>
 
               <div style={{ marginBottom: "1.1rem" }}>
-                <div className="skill-label">📞 Phone</div>
-                <span style={{ color: "var(--text)", fontSize: "0.9rem" }}>93635 10462</span>
+                <div className="skill-label">
+                  📞 Phone
+                </div>
+
+                <span
+                  style={{
+                    color: "var(--text)",
+                    fontSize: "0.9rem"
+                  }}
+                >
+                  93635 10462
+                </span>
               </div>
 
               <div style={{ marginBottom: "1.5rem" }}>
-                <div className="skill-label">📍 Location</div>
-                <span style={{ color: "var(--text)", fontSize: "0.9rem" }}>Chennai, Tamil Nadu, India</span>
+                <div className="skill-label">
+                  📍 Location
+                </div>
+
+                <span
+                  style={{
+                    color: "var(--text)",
+                    fontSize: "0.9rem"
+                  }}
+                >
+                  Chennai, Tamil Nadu, India
+                </span>
               </div>
 
               <div className="d-flex flex-wrap gap-2">
-                <a href="https://www.linkedin.com/in/aswinm2305/" target="_blank" rel="noreferrer"
-                  className="btn-am-primary" style={{ fontSize: "0.8rem", padding: "0.45rem 1rem" }}>LinkedIn</a>
-                <a href="https://github.com/aswin2305" target="_blank" rel="noreferrer"
-                  className="btn-am-outline" style={{ fontSize: "0.8rem", padding: "0.45rem 1rem" }}>GitHub</a>
-                <a href="https://www.behance.net/gallery/227556641/Design-Portfolio-Branding-UIUX-Graphics-Aswin-M" target="_blank" rel="noreferrer"
-                  className="btn-am-outline" style={{ fontSize: "0.8rem", padding: "0.45rem 1rem" }}>Behance</a>
+                <a
+                  href="https://www.linkedin.com/in/aswinm2305/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-am-primary"
+                  style={{
+                    fontSize: "0.8rem",
+                    padding: "0.45rem 1rem"
+                  }}
+                >
+                  LinkedIn
+                </a>
+
+                <a
+                  href="https://github.com/aswin2305"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-am-outline"
+                  style={{
+                    fontSize: "0.8rem",
+                    padding: "0.45rem 1rem"
+                  }}
+                >
+                  GitHub
+                </a>
+
+                <a
+                  href="https://www.behance.net/gallery/227556641/Design-Portfolio-Branding-UIUX-Graphics-Aswin-M"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-am-outline"
+                  style={{
+                    fontSize: "0.8rem",
+                    padding: "0.45rem 1rem"
+                  }}
+                >
+                  Behance
+                </a>
               </div>
             </div>
           </div>
 
           {/* ── Right: Contact Form ── */}
           <div className="col-md-8">
-            <div className="exp-card" style={{ marginBottom: 0 }}>
-              <h5 style={{ color: "var(--accent)", fontFamily: "Syne,sans-serif", marginBottom: "1.5rem" }}>
+            <div
+              className="exp-card"
+              style={{ marginBottom: 0 }}
+            >
+              <h5
+                style={{
+                  color: "var(--accent)",
+                  fontFamily: "Syne,sans-serif",
+                  marginBottom: "1.5rem"
+                }}
+              >
                 Send a Message
               </h5>
 
               {status === "success" && (
-                <div className="alert-success">✅ Message sent! I'll get back to you soon.</div>
+                <div className="alert-success">
+                  ✅ Message sent! I'll get back to you soon.
+                </div>
               )}
+
               {status === "error" && (
-                <div className="alert-error">❌ {errorMsg}</div>
+                <div className="alert-error">
+                  ❌ {errorMsg}
+                </div>
               )}
 
               <div className="row g-3">
+
                 <div className="col-sm-6">
-                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Your Name</label>
+                  <label
+                    className="skill-label"
+                    style={{
+                      display: "block",
+                      marginBottom: 6
+                    }}
+                  >
+                    Your Name
+                  </label>
+
                   <input
-                    type="text" name="name" value={form.name}
-                    onChange={handleChange} placeholder="Aswin M"
-                    className="am-input" required
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="Aswin M"
+                    className="am-input"
+                    required
                   />
                 </div>
+
                 <div className="col-sm-6">
-                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Email Address</label>
+                  <label
+                    className="skill-label"
+                    style={{
+                      display: "block",
+                      marginBottom: 6
+                    }}
+                  >
+                    Email Address
+                  </label>
+
                   <input
-                    type="email" name="email" value={form.email}
-                    onChange={handleChange} placeholder="you@email.com"
-                    className="am-input" required
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="you@email.com"
+                    className="am-input"
+                    required
                   />
                 </div>
+
                 <div className="col-12">
-                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Subject</label>
+                  <label
+                    className="skill-label"
+                    style={{
+                      display: "block",
+                      marginBottom: 6
+                    }}
+                  >
+                    Subject
+                  </label>
+
                   <input
-                    type="text" name="subject" value={form.subject}
-                    onChange={handleChange} placeholder="Collaboration / Training / Opportunity"
-                    className="am-input" required
+                    type="text"
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    placeholder="Collaboration / Training / Opportunity"
+                    className="am-input"
+                    required
                   />
                 </div>
+
                 <div className="col-12">
-                  <label className="skill-label" style={{ display: "block", marginBottom: 6 }}>Message</label>
+                  <label
+                    className="skill-label"
+                    style={{
+                      display: "block",
+                      marginBottom: 6
+                    }}
+                  >
+                    Message
+                  </label>
+
                   <textarea
-                    name="message" value={form.message}
-                    onChange={handleChange} placeholder="Hi Aswin, I'd like to..."
-                    className="am-input" rows={5} required
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Hi Aswin, I'd like to..."
+                    className="am-input"
+                    rows={5}
+                    required
                   />
                 </div>
+
                 <div className="col-12">
                   <button
                     onClick={handleSubmit}
                     disabled={status === "loading"}
                     className="btn-am-primary"
                     style={{
-                      width: "100%", textAlign: "center", padding: "0.7rem",
-                      cursor: status === "loading" ? "not-allowed" : "pointer",
-                      opacity: status === "loading" ? 0.7 : 1,
+                      width: "100%",
+                      textAlign: "center",
+                      padding: "0.7rem",
+                      cursor:
+                        status === "loading"
+                          ? "not-allowed"
+                          : "pointer",
+                      opacity:
+                        status === "loading"
+                          ? 0.7
+                          : 1,
                       border: "none"
                     }}
                   >
-                    {status === "loading" ? "Sending..." : "Send Message →"}
+                    {status === "loading"
+                      ? "Sending..."
+                      : "Send Message →"}
                   </button>
                 </div>
+
               </div>
             </div>
           </div>
@@ -990,9 +1440,14 @@ function Contact() {
 export default function App() {
   useEffect(() => {
     const style = document.createElement("style");
+
     style.textContent = css;
+
     document.head.appendChild(style);
-    return () => document.head.removeChild(style);
+
+    return () => {
+      document.head.removeChild(style);
+    };
   }, []);
 
   return (
@@ -1005,9 +1460,11 @@ export default function App() {
       <Experience />
       <Certifications />
       <Contact />
+
       <footer>
-        <p>© 2025 Aswin M · All Rights Reserved</p>
+        <p>© 2026 Aswin M · All Rights Reserved</p>
       </footer>
     </>
   );
 }
+```
